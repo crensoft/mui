@@ -18,12 +18,20 @@
     "webpack": "^4.31.0"
   },
   "name": "mui",
+  "private": true,
   "dependencies": {
-    "@crensoft/mui-core": "file:packages\\core"
+    "@crensoft/mui-core": "file:packages\\core",
+    "@crensoft/test-utils": "file:packages/test-utils"
   },
   "scripts": {
     "tsc": "tsc",
     "devDeps": "lerna link convert",
-    "linkBin": "link-parent-bin"
-  }
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "linkBin": "link-parent-bin",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

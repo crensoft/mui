@@ -1,8 +1,20 @@
+// @ts-ignore
+const path = require('path');
+
 module.exports = {
   pagePerSection: true,
   // exampleMode: 'expand',
   // usageMode: 'expand',
   propsParser: require('react-docgen-typescript').parse,
+  skipComponentsWithoutExample: true,
+  sections: [
+    {
+      name: 'Core',
+      components: ['./packages/core/src/components/**/*.tsx'],
+      exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
+      usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+    },
+  ],
   webpackConfig: {
     devtool: 'cheap-eval-source-map',
     resolve: {

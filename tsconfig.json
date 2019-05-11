@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./lib",
-    "module": "esnext",
+    "module": "commonjs",
     "target": "es5",
     "lib": ["es6", "dom"],
     "jsx": "react",
@@ -17,7 +17,8 @@
     "esModuleInterop": true,
     "noErrorTruncation": true,
     "paths": {
-      "*": ["*"]
+      "@crensoft/test-utils": ["./test-utils/src"],
+      "@crensoft/test-utils/*": ["./test-utils/src/*"]
     }
   },
   "exclude": ["node_modules", "lib"]

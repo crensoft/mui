@@ -1,7 +1,7 @@
 {
-  "name": "@crensoft/mui-core",
-  "version": "0.1.0",
-  "description": "Material UI stuff",
+  "name": "@crensoft/test-utils",
+  "version": "0.1.1",
+  "description": "React testing utils",
   "main": "./lib/index.js",
   "repository": "https://github.com/crensoft/mui",
   "author": "Terence Crenshaw",
@@ -12,21 +12,14 @@
   },
   "scripts": {
     "iprepare": "yarn run tsc && echo 'Finished building NPM package'",
-    "test": "jest --colors",
-    "test-watch": "jest --colors --watch",
     "tsc": "tsc",
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "prepare": "tsc"
   },
   "types": "./lib/index.d.ts",
   "dependencies": {
-    "@crensoft/test-utils": "file:..\\test-utils",
-    "@material-ui/core": "^3.9.3",
-    "@material-ui/styles": "^3.0.0-alpha.10",
     "@types/react": "^16.8.17",
     "ramda": "^0.26.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "rxjs": "^6.5.2"
+    "react-dom": "^16.8.6"
   }
 }
