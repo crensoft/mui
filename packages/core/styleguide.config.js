@@ -1,4 +1,7 @@
 module.exports = {
+  pagePerSection: true,
+  // exampleMode: 'expand',
+  // usageMode: 'expand',
   propsParser: require('react-docgen-typescript').parse,
   webpackConfig: {
     devtool: 'cheap-eval-source-map',
