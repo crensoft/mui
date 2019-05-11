@@ -13,6 +13,9 @@ Node version:
 Platform: 
   win32 x64
 
+
+  
+
 Trace: 
   Error: https://registry.yarnpkg.com/react-styleguideist: Not found
       at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65364:18)
