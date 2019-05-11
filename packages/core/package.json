@@ -13,7 +13,9 @@
   "scripts": {
     "iprepare": "yarn run tsc && echo 'Finished building NPM package'",
     "test": "jest --colors",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "types": "./lib/index.d.ts",
   "dependencies": {
