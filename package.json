@@ -25,6 +25,7 @@
   },
   "scripts": {
     "tsc": "tsc",
+    "tsc-w": "lerna run tsc-w --parallel",
     "devDeps": "lerna link convert",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "linkBin": "link-parent-bin",

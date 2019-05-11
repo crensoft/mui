@@ -13,7 +13,8 @@
   "scripts": {
     "iprepare": "yarn run tsc && echo 'Finished building NPM package'",
     "tsc": "tsc",
-    "prepare": "tsc"
+    "prepare": "tsc",
+    "tsc-w": "tsc -w"
   },
   "types": "./lib/index.d.ts",
   "dependencies": {

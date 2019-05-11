@@ -15,14 +15,14 @@
     "test": "jest --colors",
     "test-watch": "jest --colors --watch",
     "tsc": "tsc",
+    "tsc-w": "tsc -w",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
   },
   "types": "./lib/index.d.ts",
   "dependencies": {
     "@crensoft/test-utils": "file:..\\test-utils",
-    "@material-ui/core": "^3.9.3",
-    "@material-ui/styles": "^3.0.0-alpha.10",
+    "@material-ui/core": "^4.0.0-beta.1",
     "@types/react": "^16.8.17",
     "ramda": "^0.26.1",
     "react": "^16.8.6",
