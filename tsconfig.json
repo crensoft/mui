@@ -1,20 +1,24 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "outDir": "./lib",
+    "module": "esnext",
     "target": "es5",
     "lib": ["es6", "dom"],
     "jsx": "react",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noEmit": true,
+    "noUnusedLocals": true,
     "experimentalDecorators": true,
+    "declaration": true,
     "baseUrl": "./packages",
+    "sourceMap": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "noErrorTruncation": true,
     "paths": {
       "*": ["*"]
     }
   },
-  "exclude": ["**/build/"]
+  "exclude": ["node_modules", "lib"]
 }
