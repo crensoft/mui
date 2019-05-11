@@ -15,6 +15,19 @@ module.exports = {
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
     },
   ],
+  ignore: ['**/lib/**', '**/*.test.tsx'],
+  styleguideComponents: {
+    Wrapper: path.join(__dirname, 'packages/core/src/components/Theme/Theme')
+  },
+  template: {
+    head: {
+      raw: `<style>.styleguide-frame {
+        position: relative;
+        transform: translate3d(0, 0, 0); /* <-- THIS LINE MAKES THE TRICK! */
+        outline: 1px solid #eaeaea;
+      }</style>`
+    }
+  },
   webpackConfig: {
     devtool: 'cheap-eval-source-map',
     resolve: {

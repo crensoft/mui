@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Theme } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -19,7 +19,15 @@ const useStyles = makeStyles<Theme>(theme => ({
   },
 }));
 
-export default function Header() {
+interface HeaderProps {
+  children?: ReactNode
+}
+
+export default function Header({ children }: HeaderProps) {
   const classes = useStyles();
-  return <header className={classes.header}>test</header>;
+  return (
+    <header className={classes.header}>
+      {children}
+    </header>
+  );
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-// TESTING Aaa
 const useStyles = makeStyles(
   theme => ({
     image: ({ responsive }: Partial<ImageProps>) => {
@@ -12,7 +11,7 @@ const useStyles = makeStyles(
     },
   }),
   {
-    name: 'MUI',
+    name: 'mui',
   },
 );
 

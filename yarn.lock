@@ -146,17 +146,6 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@crensoft/mui-core@file:packages/core":
-  version "0.1.0"
-  dependencies:
-    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-9ea0b18d-7ae6-487a-95b9-b96e9d5cc0c2-1557565547648/node_modules/@crensoft/test-utils"
-    "@material-ui/core" "^4.0.0-beta.1"
-    "@types/react" "^16.8.17"
-    ramda "^0.26.1"
-    react "^16.8.6"
-    react-dom "^16.8.6"
-    rxjs "^6.5.2"
-
 "@crensoft/test-utils@file:packages/test-utils":
   version "0.1.1"
   dependencies:
@@ -1165,6 +1154,11 @@
   version "15.7.1"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.1.tgz#f1a11e7babb0c3cad68100be381d1e064c68f1f6"
   integrity sha512-CFzn9idOEpHrgdw8JsoTkaDDyRWk1jrzIV8djzcgpq0y9tG4B4lFT+Nxh52DVpDXV+n4+NPNv7M1Dj5uMp6XFg==
+
+"@types/ramda@^0.26.8":
+  version "0.26.8"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.26.8.tgz#e002612cca52e52f9176d577f4d6229c8c72a10a"
+  integrity sha512-PSMkNNhB900U2xcyndlkVjJeCXpVtf1yod0Kdq/ArsLDIE0tW8pLBChmQeJs4o4dfp3AEP+AGm6zIseZPU4ndA==
 
 "@types/react-dom@^16.8.4":
   version "16.8.4"
