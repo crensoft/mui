@@ -27,13 +27,18 @@ type Props = {
   position?: 'static' | 'fixed' | 'relative';
   /** default: 'md' */
   size?: keyof AppTheme['header']['sizes'];
-}
+};
 
-export default function AppBar({ children, size = 'md', fluid = false }: Props) {
+export default function AppBar({ children, elevation = 0, size = 'md', fluid = false }: Props) {
   const classes = useStyles({ fluid, size });
 
   return (
-    <BaseAppBar component="nav" classes={pick(['root'], classes)}>
+    <BaseAppBar
+      component="nav"
+      color="default"
+      elevation={elevation}
+      classes={pick(['root', 'colorDefault'], classes)}
+    >
       <Container fluid={fluid}>
         <Toolbar disableGutters={!fluid} className={classes.toolbar}>
           {children}

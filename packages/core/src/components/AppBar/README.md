@@ -8,8 +8,11 @@ AppBar component
 
 **Default**
 
-```jsx
-<FrameWrapper><AppBar /></FrameWrapper>
+```jsx { "props": { "style": { "minHeight": 200, "backgroundColor": "#ddd" } } }
+import AppBarLogo from './components/AppBarLogo';
+<AppBar>
+  <AppBarLogo />
+</AppBar>;
 ```
 
 ---
