@@ -7,7 +7,7 @@ const useStyles = makeStyles(
     container: (props: any) => ({
       // add padding when not fluid
       maxWidth: props.fluid ? '100%' : 1080 - theme.spacing(2),
-      padding: props.fluid ? 0 : theme.spacing(1),
+      padding: props.fluid ? 0 : `0 ${theme.spacing(1)}px`,
       width: '100%',
       margin: '0 auto',
       maxHeight: '100%',

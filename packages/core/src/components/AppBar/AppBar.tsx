@@ -38,7 +38,7 @@ export const AppBarContext = createContext({
 
 export default function AppBar({
   children,
-  color = 'neutral',
+  color = 'white',
   paletteType,
   elevation = 0,
   size = 'md',
@@ -46,7 +46,7 @@ export default function AppBar({
 }: Props) {
   const theme = useTheme<AppTheme>();
   const classes = useStyles({ fluid, size, color, paletteType });
-  console.log(theme);
+
   return (
     <AppBarContext.Provider value={{ bgColor: theme.palette.getColor(color, paletteType) }}>
       <BaseAppBar
