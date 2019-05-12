@@ -17,10 +17,14 @@
     "esModuleInterop": true,
     "noErrorTruncation": true,
     "paths": {
+      "@crensoft/mui-core": ["./core/src"],
+      "@crensoft/mui-core/*": ["./core/src/*"],
       "@crensoft/mui-utils": ["./mui-utils/src"],
       "@crensoft/mui-utils/*": ["./mui-utils/src/*"],
       "@crensoft/test-utils": ["./test-utils/src"],
-      "@crensoft/test-utils/*": ["./test-utils/src/*"]
+      "@crensoft/test-utils/*": ["./test-utils/src/*"],
+      "@crensoft/mui-marketing": ["./marketing/src"],
+      "@crensoft/mui-marketing/*": ["./marketing/src/*"]
     }
   },
   "exclude": ["node_modules", "lib", "**/*.test.*"]

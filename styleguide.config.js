@@ -15,8 +15,15 @@ module.exports = {
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
     },
+    {
+      name: 'Marketing',
+      pagePerSection: true,
+      components: ['./packages/marketing/src/components/**/*.tsx'],
+      exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
+      usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+    },
   ],
-  assetsDir: ['./packages/core/assets'],
+  assetsDir: ['./packages/core/assets', './packages/marketing/assets'],
   ignore: ['**/lib/**', '**/*.test.tsx'],
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'packages/core/src/components/Styleguide/FrameWrapper'),

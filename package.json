@@ -20,7 +20,7 @@
   "name": "mui",
   "private": true,
   "dependencies": {
-    "@crensoft/mui-core": "file:packages\\core",
+    "@crensoft/mui-core": "file:packages/core",
     "@crensoft/test-utils": "file:packages/test-utils"
   },
   "scripts": {

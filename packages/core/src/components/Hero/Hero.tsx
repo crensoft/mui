@@ -73,13 +73,15 @@ export default function Hero({
       throw new Error('Hero Action length exceeded.');
     }
     return (
-      <div className={classes.HeroActions}>
+      <Row className={classes.HeroActions} spacing={2}>
         {actions.map(({ url, content, type }) => (
-          <Button key={url} variant="contained" color={type} href={url}>
-            {content}
-          </Button>
+          <Col key={url}>
+            <Button variant="contained" color={type} href={url}>
+              {content}
+            </Button>
+          </Col>
         ))}
-      </div>
+      </Row>
     );
   };
 

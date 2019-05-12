@@ -1,0 +1,38 @@
+{
+  "name": "@crensoft/mui-marketing",
+  "version": "0.1.0",
+  "description": "Marketing components",
+  "main": "./lib/index.js",
+  "repository": "https://github.com/crensoft/mui",
+  "author": "Terence Crenshaw",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "scripts": {
+    "iprepare": "yarn run tsc && echo 'Finished building NPM package'",
+    "test": "jest --colors",
+    "test-watch": "jest --colors --watch",
+    "tsc": "tsc",
+    "tsc-w": "tsc -w",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
+  },
+  "types": "./lib/index.d.ts",
+  "dependencies": {
+    "@crensoft/mui-core": "file:../core",
+    "@crensoft/mui-utils": "file:../mui-utils",
+    "@crensoft/test-utils": "file:../test-utils",
+    "@material-ui/core": "^4.0.0-beta.1",
+    "@types/react": "^16.8.17",
+    "color": "^3.1.1",
+    "ramda": "^0.26.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rxjs": "^6.5.2"
+  },
+  "devDependencies": {
+    "@types/ramda": "^0.26.8"
+  }
+}
