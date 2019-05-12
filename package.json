@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@types/jest": "^24.0.12",
+    "@types/ramda": "^0.26.8",
     "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",
     "awesome-typescript-loader": "^5.2.1",
@@ -19,10 +20,6 @@
   },
   "name": "mui",
   "private": true,
-  "dependencies": {
-    "@crensoft/mui-core": "file:packages/core",
-    "@crensoft/test-utils": "file:packages/test-utils"
-  },
   "scripts": {
     "tsc": "tsc",
     "tsc-w": "lerna run tsc-w --parallel",
@@ -36,5 +33,11 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@crensoft/mui-core": "file:packages\\core",
+    "@crensoft/mui-marketing": "file:packages\\marketing",
+    "@crensoft/mui-utils": "file:packages\\mui-utils",
+    "@crensoft/test-utils": "file:packages\\test-utils"
+  }
 }

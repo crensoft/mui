@@ -6,6 +6,6 @@ import { WithStylesOptions } from '@material-ui/core/styles/withStyles';
 const createStyles = <T = any>(
   styles: Styles<AppTheme, T, string>,
   options?: WithStylesOptions | undefined,
-) => makeStyles<AppTheme, T>(styles, options);
+) => makeStyles<AppTheme, T>(styles, { name: 'mui', ...options });
 
 export default createStyles;

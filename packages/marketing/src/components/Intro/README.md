@@ -9,7 +9,7 @@ Intro component
 **Default**
 
 ```jsx { "props": { }}
-<Intro title="An awesome business">
+<Intro title="Welcome to Awesome">
   <p>We have the answers</p>
 </Intro>
 ```

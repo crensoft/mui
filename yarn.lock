@@ -149,8 +149,22 @@
 "@crensoft/mui-core@file:packages/core":
   version "0.1.0"
   dependencies:
-    "@crensoft/mui-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-e60f4f06-68ff-46d7-84c3-b8e5905e39a1-1557687510132/node_modules/@crensoft/mui-utils"
-    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-e60f4f06-68ff-46d7-84c3-b8e5905e39a1-1557687510132/node_modules/@crensoft/test-utils"
+    "@crensoft/mui-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-142838d0-f87b-4105-9314-6fe59c6af922-1557691759680/node_modules/@crensoft/mui-utils"
+    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-142838d0-f87b-4105-9314-6fe59c6af922-1557691759680/node_modules/@crensoft/test-utils"
+    "@material-ui/core" "^4.0.0-beta.1"
+    "@types/react" "^16.8.17"
+    color "^3.1.1"
+    ramda "^0.26.1"
+    react "^16.8.6"
+    react-dom "^16.8.6"
+    rxjs "^6.5.2"
+
+"@crensoft/mui-marketing@file:packages/marketing":
+  version "0.1.0"
+  dependencies:
+    "@crensoft/mui-core" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-marketing-0.1.0-d3250ab9-dfb8-4dc4-b77c-e5d0873148dc-1557691759789/node_modules/@crensoft/core"
+    "@crensoft/mui-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-marketing-0.1.0-d3250ab9-dfb8-4dc4-b77c-e5d0873148dc-1557691759789/node_modules/@crensoft/mui-utils"
+    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-marketing-0.1.0-d3250ab9-dfb8-4dc4-b77c-e5d0873148dc-1557691759789/node_modules/@crensoft/test-utils"
     "@material-ui/core" "^4.0.0-beta.1"
     "@types/react" "^16.8.17"
     color "^3.1.1"
@@ -162,7 +176,7 @@
 "@crensoft/mui-utils@file:packages/mui-utils":
   version "0.1.0"
   dependencies:
-    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-utils-0.1.0-c191cb5e-b0e6-4a03-bfac-6340cb363c97-1557687510161/node_modules/@crensoft/test-utils"
+    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-utils-0.1.0-a67c3731-9ccd-43c3-a799-04210e3d159d-1557691759771/node_modules/@crensoft/test-utils"
     "@material-ui/core" "^4.0.0-beta.1"
     "@types/react" "^16.8.17"
     ramda "^0.26.1"
