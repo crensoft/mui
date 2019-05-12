@@ -40,7 +40,7 @@ export default function AppBar({ children, elevation = 0, size = 'md', fluid = f
       classes={pick(['root', 'colorDefault'], classes)}
     >
       <Container fluid={fluid}>
-        <Toolbar disableGutters={!fluid} className={classes.toolbar}>
+        <Toolbar disableGutters={true} className={classes.toolbar}>
           {children}
         </Toolbar>
       </Container>

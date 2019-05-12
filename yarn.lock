@@ -146,6 +146,18 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@crensoft/mui-core@file:packages/core":
+  version "0.1.0"
+  dependencies:
+    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-cee672aa-c616-4995-8118-cb18f7e3024a-1557665962714/node_modules/@crensoft/test-utils"
+    "@crensoft/utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-cee672aa-c616-4995-8118-cb18f7e3024a-1557665962714/node_modules/@crensoft/mui-utils"
+    "@material-ui/core" "^4.0.0-beta.1"
+    "@types/react" "^16.8.17"
+    ramda "^0.26.1"
+    react "^16.8.6"
+    react-dom "^16.8.6"
+    rxjs "^6.5.2"
+
 "@crensoft/test-utils@file:packages/test-utils":
   version "0.1.1"
   dependencies:
@@ -153,6 +165,17 @@
     ramda "^0.26.1"
     react "^16.8.6"
     react-dom "^16.8.6"
+
+"@crensoft/utils@file:packages/mui-utils":
+  version "0.1.0"
+  dependencies:
+    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-utils-0.1.0-6c647729-f3cd-4517-a2f4-a325fd0059c3-1557665962747/node_modules/@crensoft/test-utils"
+    "@material-ui/core" "^4.0.0-beta.1"
+    "@types/react" "^16.8.17"
+    ramda "^0.26.1"
+    react "^16.8.6"
+    react-dom "^16.8.6"
+    rxjs "^6.5.2"
 
 "@emotion/hash@^0.7.1":
   version "0.7.1"

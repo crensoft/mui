@@ -1,7 +1,7 @@
 {
-  "name": "@crensoft/mui-core",
+  "name": "@crensoft/mui-utils",
   "version": "0.1.0",
-  "description": "Material UI stuff",
+  "description": "Material UI utils",
   "main": "./lib/index.js",
   "repository": "https://github.com/crensoft/mui",
   "author": "Terence Crenshaw",
@@ -21,8 +21,7 @@
   },
   "types": "./lib/index.d.ts",
   "dependencies": {
-    "@crensoft/mui-utils": "file:../mui-utils",
-    "@crensoft/test-utils": "file:../test-utils",
+    "@crensoft/test-utils": "file:..\\test-utils",
     "@material-ui/core": "^4.0.0-beta.1",
     "@types/react": "^16.8.17",
     "ramda": "^0.26.1",

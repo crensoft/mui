@@ -10,8 +10,31 @@ AppBar component
 
 ```jsx { "props": { "style": { "minHeight": 200, "backgroundColor": "#ddd" } } }
 import AppBarLogo from './components/AppBarLogo';
+import AppMenu from './components/AppMenu';
+const menus = [
+  [
+    {
+      title: 'Pricing',
+    },
+    {
+      title: 'Portfolio',
+    },
+    {
+      title: 'About',
+    },
+    {
+      title: 'contact us',
+      btn: {
+        variant: 'contained',
+        color: 'primary',
+      },
+    },
+  ],
+];
+
 <AppBar>
-  <AppBarLogo />
+  <AppBarLogo img="/img/logo.svg" />
+  <AppMenu menu={menus[0]} />
 </AppBar>;
 ```
 

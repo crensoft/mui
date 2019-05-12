@@ -12,11 +12,13 @@ const useStyles = makeStyles<AppTheme>(theme => ({
   },
 }));
 
-export default function AppBarLogo({}) {
+type Props = {
+  img?: string;
+};
+
+export default function AppBarLogo({ img }: Props) {
   const classes = useStyles();
   return (
-    <div className={classes['appbar-logo']}>
-      <Image src="/img/logo.svg" alt="App logo" responsive />
-    </div>
+    <div className={classes['appbar-logo']}>{img && <Image src={img} alt="Home" responsive />}</div>
   );
 }

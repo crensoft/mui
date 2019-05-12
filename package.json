@@ -26,6 +26,8 @@
   "scripts": {
     "tsc": "tsc",
     "tsc-w": "lerna run tsc-w --parallel",
+    "test": "lerna run test --parallel",
+    "test-watch": "lerna run test-watch --parallel",
     "devDeps": "lerna link convert",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "linkBin": "link-parent-bin",

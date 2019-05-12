@@ -17,9 +17,11 @@
     "esModuleInterop": true,
     "noErrorTruncation": true,
     "paths": {
+      "@crensoft/mui-utils": ["./mui-utils/src"],
+      "@crensoft/mui-utils/*": ["./mui-utils/src/*"],
       "@crensoft/test-utils": ["./test-utils/src"],
       "@crensoft/test-utils/*": ["./test-utils/src/*"]
     }
   },
-  "exclude": ["node_modules", "lib"]
+  "exclude": ["node_modules", "lib", "**/*.test.*"]
 }
