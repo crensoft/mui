@@ -20,6 +20,9 @@
     "styleguide:build": "styleguidist build"
   },
   "types": "./lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
   "dependencies": {
     "@crensoft/test-utils": "file:../test-utils",
     "@material-ui/core": "^4.0.0-beta.1",

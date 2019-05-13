@@ -35,7 +35,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@crensoft/mui-core": "file:packages\\core",
+    "@crensoft/mui-core": "0.1.0",
     "@crensoft/mui-marketing": "file:packages\\marketing",
     "@crensoft/mui-utils": "file:packages\\mui-utils",
     "@crensoft/test-utils": "file:packages\\test-utils"

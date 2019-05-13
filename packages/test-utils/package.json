@@ -17,6 +17,9 @@
     "tsc-w": "tsc -w"
   },
   "types": "./lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
   "dependencies": {
     "@types/react": "^16.8.17",
     "ramda": "^0.26.1",

@@ -1,11 +1,12 @@
 import React from 'react';
 
-export default function AButton({
-  name,
-  onClick,
-}: {
+type Props = {
   name: string;
   onClick: React.MouseEventHandler;
-}) {
-  return <button onClick={onClick}>Click me: {name}</button>;
-}
+};
+
+const AButton: React.FunctionComponent<Props> = ({ name, onClick }) => (
+  <button onClick={onClick}>Click me1: {name}</button>
+);
+
+export default AButton;

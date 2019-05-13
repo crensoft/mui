@@ -11,7 +11,7 @@
     "react-dom": "^16.8.6"
   },
   "scripts": {
-    "iprepare": "yarn run tsc && echo 'Finished building NPM package'",
+    "prepare": "yarn run tsc && echo 'Finished building NPM package'",
     "test": "jest --colors",
     "test-watch": "jest --colors --watch",
     "tsc": "tsc",
@@ -20,6 +20,9 @@
     "styleguide:build": "styleguidist build"
   },
   "types": "./lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
   "dependencies": {
     "@crensoft/mui-core": "file:../core",
     "@crensoft/mui-utils": "file:../mui-utils",

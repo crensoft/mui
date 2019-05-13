@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "./lib",
     "module": "commonjs",
     "target": "es5",
     "lib": ["es6", "dom"],
@@ -11,21 +10,15 @@
     "noUnusedLocals": true,
     "experimentalDecorators": true,
     "declaration": true,
-    "baseUrl": "./packages",
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "noErrorTruncation": true,
+    "newLine": "LF",
+    "resolveJsonModule": true,
     "paths": {
-      "@crensoft/mui-core": ["./core/src"],
-      "@crensoft/mui-core/*": ["./core/src/*"],
-      "@crensoft/mui-utils": ["./mui-utils/src"],
-      "@crensoft/mui-utils/*": ["./mui-utils/src/*"],
-      "@crensoft/test-utils": ["./test-utils/src"],
-      "@crensoft/test-utils/*": ["./test-utils/src/*"],
-      "@crensoft/mui-marketing": ["./marketing/src"],
-      "@crensoft/mui-marketing/*": ["./marketing/src/*"]
+      "@crensoft/*": ["packages/*/src"]
     }
   },
-  "exclude": ["node_modules", "lib", "**/*.test.*"]
+  "exclude": ["node_modules", "lib", "packages/*/src/**/*.test.ts(x)?"]
 }

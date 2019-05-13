@@ -20,6 +20,9 @@
     "styleguide:build": "styleguidist build"
   },
   "types": "./lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
   "dependencies": {
     "@crensoft/mui-utils": "file:../mui-utils",
     "@crensoft/test-utils": "file:../test-utils",
