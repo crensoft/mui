@@ -17,6 +17,7 @@ const muiTheme = {
     },
   },
   palette: {
+    tonalOffset: 0.5,
     contrastThreshold: 4.5,
     neutral: {
       light: grey[300],
@@ -31,7 +32,37 @@ const muiTheme = {
       if (this[name]) {
         return this[name][paletteType || this.type];
       }
-      return this.common[name];
+      return this.common[name] || name;
+    },
+  },
+  typography: {
+    h1: {
+      fontSize: '3.5rem',
+      lineHeight: 1.3,
+      fontWeight: 500,
+    },
+    h2: {
+      fontSize: '2rem',
+      lineHeight: 1.3,
+      fontWeight: 500,
+    },
+    h3: {
+      fontSize: '1.5rem',
+      lineHeight: 1.3,
+      fontWeight: 500,
+    },
+    h4: {
+      fontSize: '1.2rem',
+      lineHeight: 1.3,
+      fontWeight: 400,
+    },
+    h5: {
+      fontSize: '1rem',
+      lineHeight: 1.3,
+      fontWeight: 400,
+    },
+    subtitle1: {
+      lineHeight: 1.3,
     },
   },
   overrides: {

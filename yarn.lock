@@ -149,22 +149,13 @@
 "@crensoft/mui-core@file:packages/core":
   version "0.1.0"
   dependencies:
-    "@crensoft/mui-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-142838d0-f87b-4105-9314-6fe59c6af922-1557691759680/node_modules/@crensoft/mui-utils"
-    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-142838d0-f87b-4105-9314-6fe59c6af922-1557691759680/node_modules/@crensoft/test-utils"
-    "@material-ui/core" "^4.0.0-beta.1"
-    "@types/react" "^16.8.17"
-    color "^3.1.1"
-    ramda "^0.26.1"
-    react "^16.8.6"
-    react-dom "^16.8.6"
-    rxjs "^6.5.2"
-
-"@crensoft/mui-marketing@file:packages/marketing":
-  version "0.1.0"
-  dependencies:
-    "@crensoft/mui-core" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-marketing-0.1.0-d3250ab9-dfb8-4dc4-b77c-e5d0873148dc-1557691759789/node_modules/@crensoft/core"
-    "@crensoft/mui-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-marketing-0.1.0-d3250ab9-dfb8-4dc4-b77c-e5d0873148dc-1557691759789/node_modules/@crensoft/mui-utils"
-    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-marketing-0.1.0-d3250ab9-dfb8-4dc4-b77c-e5d0873148dc-1557691759789/node_modules/@crensoft/test-utils"
+    "@crensoft/mui-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-62b15050-5e67-48e8-aa05-b4fdf46d57f3-1557789262166/node_modules/@crensoft/mui-utils"
+    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-62b15050-5e67-48e8-aa05-b4fdf46d57f3-1557789262166/node_modules/@crensoft/test-utils"
+    "@fortawesome/fontawesome-svg-core" "^1.2.18"
+    "@fortawesome/free-brands-svg-icons" "^5.8.2"
+    "@fortawesome/free-regular-svg-icons" "^5.8.2"
+    "@fortawesome/free-solid-svg-icons" "^5.8.2"
+    "@fortawesome/react-fontawesome" "^0.1.4"
     "@material-ui/core" "^4.0.0-beta.1"
     "@types/react" "^16.8.17"
     color "^3.1.1"
@@ -176,7 +167,7 @@
 "@crensoft/mui-utils@file:packages/mui-utils":
   version "0.1.0"
   dependencies:
-    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-utils-0.1.0-a67c3731-9ccd-43c3-a799-04210e3d159d-1557691759771/node_modules/@crensoft/test-utils"
+    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-utils-0.1.0-7e1bc0d3-f406-42e9-b3f7-6f11444bf480-1557789262168/node_modules/@crensoft/test-utils"
     "@material-ui/core" "^4.0.0-beta.1"
     "@types/react" "^16.8.17"
     ramda "^0.26.1"
@@ -196,6 +187,47 @@
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.7.1.tgz#9833722341379fb7d67f06a4b00ab3c37913da53"
   integrity sha512-OYpa/Sg+2GDX+jibUfpZVn1YqSVRpYmTLF2eyAfrFTIJSbwyIrc+YscayoykvaOME/wV4BV0Sa0yqdMrgse6mA==
+
+"@fortawesome/fontawesome-common-types@^0.2.18":
+  version "0.2.18"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.18.tgz#c0d8f073a5116b2de0a2c8a7aba66093a6956ce7"
+  integrity sha512-834DrzO2Ne3upCW+mJJPC/E6BsFcj+2Z1HmPIhbpbj8UaKmXWum4NClqLpUiMetugRlHuG4jbIHNdv2/lc3c1Q==
+
+"@fortawesome/fontawesome-svg-core@^1.2.18":
+  version "1.2.18"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.18.tgz#c26cbded461895ebe260f0dea771ca29d8cb3517"
+  integrity sha512-1vyLWVQqxQ8q8bA2zgZcljk3RkeELlDJ757ymLk+ebK019AFgEFH5kTnR5OMN1SFsTwW1OHlFQO3VufdeCg/Gg==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.18"
+
+"@fortawesome/free-brands-svg-icons@^5.8.2":
+  version "5.8.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.8.2.tgz#e68a509c986d5d197cc5bd9ae8d966eff513468d"
+  integrity sha512-nhEWctDOP6f+Ka10LXAFoF+6mtWidC2iQgTBGRGgydmhBtcIEwyxWVx5wQHa86A1zAMi5TnipDAYQs2qn7DD6A==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.18"
+
+"@fortawesome/free-regular-svg-icons@^5.8.2":
+  version "5.8.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.8.2.tgz#f61c603c73695a41bcee9d6f9d44e2ca4829f151"
+  integrity sha512-499WODlsDcXA9hM+Y3ZqoWj1kKhVLCHS8PnJs3zEaoPr5W6yrE9Jnp3C9Hb9KpwnRMh3IRXZ3XqxyUaQFMMRFw==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.18"
+
+"@fortawesome/free-solid-svg-icons@^5.8.2":
+  version "5.8.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.8.2.tgz#aa2f042f73aca43eb4a26149907e63bf26d2e31c"
+  integrity sha512-5tF6WOFlqqO95zY5ukSB6jliDa3jnk1p5L4K/a58ccDFsbjSkhfGuvZkRkeWxH8uMms81pZd6yQTwQrkedeJmg==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.18"
+
+"@fortawesome/react-fontawesome@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.4.tgz#18d61d9b583ca289a61aa7dccc05bd164d6bc9ad"
+  integrity sha512-GwmxQ+TK7PEdfSwvxtGnMCqrfEm0/HbRHArbUudsYiy9KzVCwndxa2KMcfyTQ8El0vROrq8gOOff09RF1oQe8g==
+  dependencies:
+    humps "^2.0.1"
+    prop-types "^15.5.10"
 
 "@jest/console@^24.7.1":
   version "24.7.1"
@@ -4408,6 +4440,11 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
+humps@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/humps/-/humps-2.0.1.tgz#dd02ea6081bd0568dc5d073184463957ba9ef9aa"
+  integrity sha1-3QLqYIG9BWjcXQcxhEY5V7qe+ao=
+
 hyphenate-style-name@^1.0.2, hyphenate-style-name@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.3.tgz#097bb7fa0b8f1a9cf0bd5c734cf95899981a9b48"
@@ -7298,7 +7335,7 @@ promzard@^0.3.0:
   dependencies:
     read "1"
 
-prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==

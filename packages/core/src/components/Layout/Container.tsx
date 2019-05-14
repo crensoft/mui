@@ -1,17 +1,19 @@
 import React from 'react';
 import { ReactNode } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { Container as BaseContainer } from '@material-ui/core';
 
 const useStyles = makeStyles(
   theme => ({
-    container: (props: any) => ({
-      // add padding when not fluid
-      maxWidth: props.fluid ? '100%' : 1080 - theme.spacing(2),
-      padding: props.fluid ? 0 : `0 ${theme.spacing(1)}px`,
-      width: '100%',
-      margin: '0 auto',
-      maxHeight: '100%',
-    }),
+    root: (props: any) => {
+      if (!props.center) {
+        return {
+          padding: 0,
+          margin: 0,
+        };
+      }
+      return {};
+    },
   }),
   {
     name: 'mui',
@@ -21,12 +23,23 @@ const useStyles = makeStyles(
 interface ContainerProps {
   children?: ReactNode;
   fluid?: boolean;
+  maxWidth?: 'sm' | 'md';
+  center?: boolean;
 }
 
 /**
  * Container with max width
  */
-export default function Container({ children, fluid = false }: ContainerProps) {
-  const classes = useStyles({ fluid });
-  return <div className={classes.container}>{children}</div>;
+export default function Container({
+  children,
+  maxWidth,
+  center = false,
+  fluid = false,
+}: ContainerProps) {
+  const classes = useStyles({ fluid, center });
+  return (
+    <BaseContainer maxWidth={maxWidth} className={classes.root}>
+      {children}
+    </BaseContainer>
+  );
 }

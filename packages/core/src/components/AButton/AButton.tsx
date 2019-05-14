@@ -6,7 +6,7 @@ type Props = {
 };
 
 const AButton: React.FunctionComponent<Props> = ({ name, onClick }) => (
-  <button onClick={onClick}>Click me1: {name}</button>
+  <button onClick={onClick}>Click me: {name}</button>
 );
 
 export default AButton;

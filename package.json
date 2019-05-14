@@ -22,9 +22,9 @@
   "private": true,
   "scripts": {
     "tsc": "tsc",
-    "tsc-w": "lerna run tsc-w --parallel",
-    "test": "lerna run test --parallel",
-    "test-watch": "lerna run test-watch --parallel",
+    "tsc-w": "lerna run tsc-w --stream --parallel",
+    "test": "lerna run test --stream --parallel",
+    "test-watch": "lerna run test-watch --stream --parallel",
     "devDeps": "lerna link convert",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "linkBin": "link-parent-bin",
@@ -33,11 +33,5 @@
   },
   "workspaces": [
     "packages/*"
-  ],
-  "dependencies": {
-    "@crensoft/mui-core": "0.1.0",
-    "@crensoft/mui-marketing": "file:packages\\marketing",
-    "@crensoft/mui-utils": "file:packages\\mui-utils",
-    "@crensoft/test-utils": "file:packages\\test-utils"
-  }
+  ]
 }
