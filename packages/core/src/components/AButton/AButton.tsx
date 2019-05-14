@@ -5,8 +5,6 @@ type Props = {
   onClick: React.MouseEventHandler;
 };
 
-const AButton: React.FunctionComponent<Props> = ({ name, onClick }) => (
-  <button onClick={onClick}>Click me: {name}</button>
-);
-
-export default AButton;
+export default function AButton({ name, onClick }: Props) {
+  return <button onClick={onClick}>Click me: {name}</button>;
+}

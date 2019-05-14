@@ -21,7 +21,7 @@ export type ActionGroupProps = {
   actions?: Action[];
 };
 
-const ActionGroup: React.FunctionComponent<ActionGroupProps> = ({ children, actions }) => {
+export default function ActionGroup({ children, actions }: ActionGroupProps) {
   if (!actions) {
     throw new Error('Actions required');
   }
@@ -33,6 +33,4 @@ const ActionGroup: React.FunctionComponent<ActionGroupProps> = ({ children, acti
     return <Link key={url} to={url} {...action} {...opts} />;
   });
   return <Row>{renderActions(actions)}</Row>;
-};
-
-export default ActionGroup;
+}

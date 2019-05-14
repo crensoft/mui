@@ -23,7 +23,7 @@ type Props = {
   content?: React.ReactNode;
 };
 
-const Link: React.FunctionComponent<Props> = ({ children, content, to, guide, ...other }) => {
+export default function Link({ children, content, to, guide, ...other }: Props) {
   const classes = useStyles();
   const renderIcon = () => {
     if (!guide) return null;
@@ -37,6 +37,4 @@ const Link: React.FunctionComponent<Props> = ({ children, content, to, guide, ..
       {renderIcon()}
     </BaseLink>
   );
-};
-
-export default Link;
+}

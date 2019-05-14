@@ -7,7 +7,9 @@ A simple click me button.
 #### Examples
 
 ```jsx
-<AButton name="jane" />
+import AButton from './AButton';
+
+<AButton name="jane" />;
 ```
 
 ---

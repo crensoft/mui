@@ -9,7 +9,8 @@ Link component
 **Default**
 
 ```jsx { "props": { }}
-<Link guide content="Want to see more" />
+import Link from './Link';
+<Link guide content="Want to see more" />;
 ```
 
 ---
