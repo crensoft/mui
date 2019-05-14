@@ -1,5 +1,6 @@
 import React from 'react';
 import { cleanup, render } from 'react-testing-library';
+import FrameWrapper from '@crensoft/mui-core/lib/components/Styleguide/FrameWrapper';
 import Intro from './Intro';
 
 afterEach(cleanup);
@@ -20,7 +21,11 @@ Nullam ac tortor vitae purus faucibus.`,
 };
 
 test('should render', () => {
-  const { getByText } = render(<Intro {...sample} />);
+  const { getByText } = render(
+    <FrameWrapper>
+      <Intro {...sample} />
+    </FrameWrapper>,
+  );
 
   ['label', 'title', 'body'].map(field => {
     expect(getByText(sample[field])).not.toBeNull();

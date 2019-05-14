@@ -10,14 +10,12 @@ module.exports = {
   sections: [
     {
       name: 'Core',
-      pagePerSection: true,
       components: ['./packages/core/src/components/**/*.tsx'],
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
     },
     {
       name: 'Marketing',
-      pagePerSection: true,
       components: ['./packages/marketing/src/components/**/*.tsx'],
       exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
       usageMode: 'expand', // 'hide' | 'collapse' | 'expand'

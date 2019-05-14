@@ -14,7 +14,7 @@ const useStyles = createStyles(theme => ({
   }),
 }));
 
-type Props = {
+export type IntroProps = {
   title?: ReactNode;
   label?: ReactNode;
   /** Body text */
@@ -54,7 +54,7 @@ export default function Intro({
   divider,
   dividerColor,
   children,
-}: Props) {
+}: IntroProps) {
   const align = center ? 'center' : 'left';
   let calcDividerColor: any;
   // allow color to be set from value of another prop
