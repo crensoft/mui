@@ -41,7 +41,7 @@ library.add(faCube, faCircle);
 
 **Colorful**
 
-```jsx { "props": { }}
+```jsx
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCube, faCircle } from '@fortawesome/free-solid-svg-icons';
 
