@@ -70,7 +70,7 @@ const muiTheme = {
       // Name of the component ⚛ / style sheet
       text: {
         // Name of the rule
-        color: 'white', // Some CSS
+        // color: 'white', // Some CSS
       },
     },
   },

@@ -2,6 +2,7 @@ import React from 'react';
 import { ReactNode } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container as BaseContainer } from '@material-ui/core';
+import { ContainerProps as BaseContainerProps } from '@material-ui/core/Container';
 
 const useStyles = makeStyles(
   theme => ({
@@ -20,10 +21,9 @@ const useStyles = makeStyles(
   },
 );
 
-interface ContainerProps {
+export interface ContainerProps extends Pick<BaseContainerProps, 'maxWidth'> {
   children?: ReactNode;
   fluid?: boolean;
-  maxWidth?: 'sm' | 'md';
   center?: boolean;
 }
 

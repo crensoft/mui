@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import { createStyles, Row, Col, Container, Img } from '@crensoft/mui-core';
+import { createStyles, Row, Col, Img } from '@crensoft/mui-core';
+import MarketSection, { MarketSectionProps } from '../MarketSection/MarketSection';
 
 const useStyles = createStyles(theme => ({
   Highlight: () => ({
@@ -15,14 +16,15 @@ const useStyles = createStyles(theme => ({
   },
 }));
 
-type Props = {
+export type HighlightProps = {
   children?: ReactNode;
   illustration?: any;
   centerItems?: boolean;
   flip?: boolean;
-};
+  custom?: any;
+} & MarketSectionProps;
 
-export default function Highlight({ children, centerItems, flip }: Props) {
+export default function Highlight({ children, centerItems, flip, custom = {} }: HighlightProps) {
   const classes = useStyles({ centerItems });
 
   const contentItems = [
@@ -41,10 +43,8 @@ export default function Highlight({ children, centerItems, flip }: Props) {
     contentItems.reverse();
   }
   return (
-    <section className={classes.Highlight}>
-      <Container>
-        <Row className={classes.Highlight}>{contentItems}</Row>
-      </Container>
-    </section>
+    <MarketSection className={classes.Highlight}>
+      <Row className={`${custom.HighlightContent}`}>{contentItems}</Row>
+    </MarketSection>
   );
 }

@@ -2,9 +2,8 @@ import React, { ReactNode } from 'react';
 import { createStyles, Row, Col } from '@crensoft/mui-core';
 import { ColProps } from '@crensoft/mui-core/lib/components/Layout/Col';
 import renderMap from '@crensoft/mui-utils/lib/renderMap';
-import PainPoint from '../PainPoint/PainPoint';
+import PainPoint, { PainPointProps } from '../PainPoint/PainPoint';
 import { IntroProps } from '../Intro/Intro';
-import { Action } from '@crensoft/mui-core/lib/components/Actions/ActionGroup';
 import { splitEvery } from 'ramda';
 import { Card, CardContent } from '@material-ui/core';
 
@@ -24,9 +23,7 @@ const useStyles = createStyles(theme => ({
   },
 }));
 
-interface FeaturedItem extends IntroProps {
-  actions: Action;
-}
+interface FeaturedItem extends PainPointProps {}
 
 type Props = {
   children?: ReactNode;
@@ -65,7 +62,7 @@ export default function FeaturedList({ fullWidth, center, cards, intro, large, f
   }
 
   const renderFeatures = renderMap(({ actions, ...feature }) => {
-    let content = <PainPoint center={center} intro={{ ...intro, ...feature }} actions={actions} />;
+    let content = <PainPoint center={center} {...intro} {...feature} actions={actions} />;
     if (cards) {
       content = (
         <Card key="card" style={{ width: '100%' }}>

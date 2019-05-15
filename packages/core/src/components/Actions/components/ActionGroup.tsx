@@ -1,24 +1,17 @@
 import React from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
-import { Row } from '../Layout';
 import { renderMap } from '@crensoft/mui-utils';
-import Link from './Link';
 import { contains } from 'ramda';
+import { Row } from '../../Layout';
+import ActionLink, { ActionLinkProps } from './ActionLink';
 
 library.add(faLongArrowAltRight);
-
-export interface Action {
-  url?: string;
-  onAction: Function;
-  content: React.ReactNode;
-  tags: string[];
-}
 
 export type ActionGroupProps = {
   guide?: boolean;
   children?: React.ReactNode;
-  actions?: Action[];
+  actions?: ActionLinkProps[];
   center?: boolean;
 };
 
@@ -31,7 +24,7 @@ export default function ActionGroup({ children, actions, center }: ActionGroupPr
     if (contains('guide', tags)) {
       opts.guide = true;
     }
-    return <Link key={url} to={url} {...action} {...opts} />;
+    return <ActionLink key={url} to={url} {...action} {...opts} />;
   });
   return <Row justify={center ? 'center' : 'flex-start'}>{renderActions(actions)}</Row>;
 }

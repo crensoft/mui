@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { renderText, createStyles, Icon, CircleIcon, Spacer, Container } from '@crensoft/mui-core';
 import { Avatar, Divider } from '@material-ui/core';
+import { TypographyProps } from '@material-ui/core/Typography';
 
 const useStyles = createStyles(theme => ({
   Intro: ({ align, inline, center }) => ({
@@ -40,6 +41,7 @@ export type IntroProps = {
   dividerColor?: string;
   /** display icon on same line as content */
   inline?: boolean;
+  h1?: boolean;
 };
 
 export default function Intro({
@@ -60,6 +62,7 @@ export default function Intro({
   dividerColor,
   children,
   inline,
+  h1,
 }: IntroProps) {
   const align = center ? 'center' : 'left';
   let calcDividerColor: any;
@@ -83,7 +86,10 @@ export default function Intro({
     throw new Error('Intro title and body cannot both be empty');
   }
   const renderTitle = () => {
-    const titleTag = main ? 'h2' : 'h3';
+    let titleTag: TypographyProps['variant'] = main ? 'h2' : 'h3';
+    if (h1) {
+      titleTag = 'h1';
+    }
     let calcTitleColor: any;
     // xxx: should omit self
     switch (titleColor) {
@@ -111,11 +117,16 @@ export default function Intro({
   }
 
   const renderBody = () => {
-    const bodyVariant = main ? 'body1' : 'body2';
+    let bodyVariant: TypographyProps['variant'] = main ? 'body1' : 'body2';
+    let maxWidth: any = 'sm';
+    if (h1) {
+      maxWidth = 'xs';
+      bodyVariant = 'body1';
+    }
     const ele = renderText({ key: 'body', align, variant: bodyVariant }, body);
     return (
       ele && (
-        <Container center={center} maxWidth="sm" key="body-container">
+        <Container center={center} maxWidth={maxWidth} key="body-container">
           {ele}
         </Container>
       )

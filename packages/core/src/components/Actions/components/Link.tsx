@@ -3,7 +3,7 @@ import BaseLink from '@material-ui/core/Link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
-import createStyles from '../Theme/createStyles';
+import createStyles from '../../Theme/createStyles';
 
 library.add(faLongArrowAltRight);
 
@@ -16,25 +16,28 @@ const useStyles = createStyles(theme => ({
   },
 }));
 
-type Props = {
+export type LinkProps = {
   to?: string;
   guide?: boolean;
   children?: React.ReactNode;
   content?: React.ReactNode;
+  component?: React.ReactElement;
 };
 
-export default function Link({ children, content, to, guide, ...other }: Props) {
+export default function Link({ component, children, content, to, guide, ...other }: LinkProps) {
   const classes = useStyles();
   const renderIcon = () => {
     if (!guide) return null;
     // xxx: can also use ">" as arrow
     return <FontAwesomeIcon className={classes.LinkGuide} icon="long-arrow-alt-right" />;
   };
+
+  const Component: any = component || BaseLink;
   return (
-    <BaseLink {...other} href={to} title={content as string}>
+    <Component {...other} href={to} title={content as string}>
       {content}
       {children}
       {renderIcon()}
-    </BaseLink>
+    </Component>
   );
 }

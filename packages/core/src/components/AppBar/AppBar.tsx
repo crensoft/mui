@@ -17,6 +17,9 @@ const useStyles = makeStyles<AppTheme, Props>(theme => ({
     justifyContent: 'space-between',
     height: theme.topbar.height(size),
   }),
+  HeaderFill: ({ size }) => ({
+    height: theme.topbar.height(size),
+  }),
 }));
 
 type Props = {
@@ -30,6 +33,7 @@ type Props = {
   color?: 'primary' | 'secondary' | 'neutral' | 'black' | 'white';
   colorScale?: number;
   paletteType?: 'dark' | 'light' | 'main';
+  large?: boolean;
 };
 
 export const AppBarContext = createContext({
@@ -41,26 +45,30 @@ export default function AppBar({
   color = 'white',
   paletteType,
   elevation = 0,
-  size = 'md',
   fluid = false,
+  large,
 }: Props) {
   const theme = useTheme<AppTheme>();
+  const size = large ? 'lg' : 'md';
   const classes = useStyles({ fluid, size, color, paletteType });
 
   return (
     <AppBarContext.Provider value={{ bgColor: theme.palette.getColor(color, paletteType) }}>
-      <BaseAppBar
-        component="nav"
-        color="default"
-        elevation={elevation}
-        classes={pick(['root', 'colorDefault'], classes)}
-      >
-        <Container fluid={fluid}>
-          <Toolbar disableGutters={true} className={classes.toolbar}>
-            {children}
-          </Toolbar>
-        </Container>
-      </BaseAppBar>
+      <header>
+        <div className={classes.HeaderFill} />
+        <BaseAppBar
+          component="nav"
+          color="default"
+          elevation={elevation}
+          classes={pick(['root', 'colorDefault'], classes)}
+        >
+          <Container fluid={fluid} center>
+            <Toolbar disableGutters={true} className={classes.toolbar}>
+              {children}
+            </Toolbar>
+          </Container>
+        </BaseAppBar>
+      </header>
     </AppBarContext.Provider>
   );
 }

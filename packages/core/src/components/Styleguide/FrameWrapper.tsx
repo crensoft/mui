@@ -1,4 +1,4 @@
-import React, { ReactNode, CSSProperties } from 'react';
+import React, { ReactNode, CSSProperties, useState } from 'react';
 import { makeStyles } from '@material-ui/core';
 import Theme from '../Theme/Theme';
 
@@ -19,8 +19,13 @@ export default function FrameWrapper({
   style?: CSSProperties;
 }) {
   const classes = useStyles();
+  const [enableFullscreen, setState] = useState(false);
+  // @ts-ignore
+  window.__FRAME_WRAPPER__ = {
+    setState,
+  };
   return (
-    <div style={style} className={classes['frame-wrapper']}>
+    <div style={style} className={enableFullscreen ? '' : classes['frame-wrapper']}>
       <Theme>{children}</Theme>
     </div>
   );

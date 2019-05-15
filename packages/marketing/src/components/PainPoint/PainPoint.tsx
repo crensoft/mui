@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { createStyles, ActionGroup, Spacer } from '@crensoft/mui-core';
 import Intro, { IntroProps } from '../Intro/Intro';
-import { ActionGroupProps } from '@crensoft/mui-core/lib/components/Actions/ActionGroup';
+import { ActionGroupProps } from '@crensoft/mui-core/lib/components/Actions/components/ActionGroup';
 
 const useStyles = createStyles(theme => ({
   PainPoint: ({ padding }) => ({
@@ -9,15 +9,21 @@ const useStyles = createStyles(theme => ({
   }),
 }));
 
-type Props = {
-  intro: IntroProps;
+export interface PainPointProps extends IntroProps {
   children?: ReactNode;
   actions?: ActionGroupProps['actions'];
   padding?: number;
   center?: boolean;
-};
+  h1?: boolean;
+}
 
-export default function PainPoint({ intro, children, actions, center, padding }: Props) {
+export default function PainPoint({
+  children,
+  actions,
+  center,
+  padding,
+  ...intro
+}: PainPointProps) {
   const classes = useStyles({ padding });
   return (
     <div className={classes.PainPoint}>

@@ -1,12 +1,8 @@
 import React from 'react';
-import { Action } from '@crensoft/mui-core/lib/components/Actions/ActionGroup';
 import MarketSection, { MarketSectionProps } from '../MarketSection/MarketSection';
-import PainPoint from '../PainPoint/PainPoint';
-import { IntroProps } from '../Intro/Intro';
+import PainPoint, { PainPointProps } from '../PainPoint/PainPoint';
 
-interface CTAProps extends IntroProps, Partial<MarketSectionProps> {
-  actions: Action[];
-}
+interface CTAProps extends PainPointProps, Partial<MarketSectionProps> {}
 
 export default function CTA({ whitespace, center, actions, ...props }: CTAProps) {
   if (!actions || !actions.length) {
@@ -14,7 +10,7 @@ export default function CTA({ whitespace, center, actions, ...props }: CTAProps)
   }
   return (
     <MarketSection whitespace={whitespace}>
-      <PainPoint center={center} intro={props} actions={actions} />
+      <PainPoint center={center} {...props} actions={actions} />
     </MarketSection>
   );
 }

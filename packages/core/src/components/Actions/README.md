@@ -9,8 +9,16 @@ Link component
 **Default**
 
 ```jsx { "props": { }}
-import Link from './Link';
-<Link guide content="Want to see more" />;
+import Link from './components/Link';
+import ActionLink from './components/ActionLink';
+// prominent/contained, notable/outlined, info/text
+<div>
+  <Link guide content="Want to see more" />
+  <br />
+  <br />
+  <br />
+  <ActionLink prominent primary to="#example" content="Get Started" />
+</div>;
 ```
 
 ---
