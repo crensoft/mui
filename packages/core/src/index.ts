@@ -7,3 +7,4 @@ export { default as CircleIcon } from './components/Icon/CircleIcon';
 export { default as Spacer } from './components/Layout/Spacer';
 export { default as Link } from './components/Actions/Link';
 export { default as ActionGroup } from './components/Actions/ActionGroup';
+export { default as Img } from './components/Img/Img';

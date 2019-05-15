@@ -11,14 +11,12 @@ module.exports = {
     {
       name: 'Core',
       components: ['./packages/core/src/components/**/*.tsx'],
-      exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
-      usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+      sectionDepth: 2,
     },
     {
       name: 'Marketing',
       components: ['./packages/marketing/src/components/**/*.tsx'],
-      exampleMode: 'expand', // 'hide' | 'collapse' | 'expand'
-      usageMode: 'expand', // 'hide' | 'collapse' | 'expand'
+      sectionDepth: 2,
     },
   ],
   assetsDir: ['./packages/core/assets', './packages/marketing/assets'],
