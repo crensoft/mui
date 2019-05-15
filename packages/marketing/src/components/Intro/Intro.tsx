@@ -3,8 +3,11 @@ import { renderText, createStyles, Icon, CircleIcon, Spacer, Container } from '@
 import { Avatar, Divider } from '@material-ui/core';
 
 const useStyles = createStyles(theme => ({
-  Intro: ({ align }: { align: 'left' | 'center' }) => ({
+  Intro: ({ align, inline, center }) => ({
     textAlign: align,
+    flexDirection: inline ? 'row' : 'column',
+    justifyContent: center ? 'center' : 'flex-start',
+    display: 'flex',
   }),
   IntroDivider: ({ dividerColor, center }) => ({
     maxWidth: 120,
@@ -35,6 +38,8 @@ export type IntroProps = {
   titleColor?: string;
   divider?: 'header' | 'footer';
   dividerColor?: string;
+  /** display icon on same line as content */
+  inline?: boolean;
 };
 
 export default function Intro({
@@ -54,6 +59,7 @@ export default function Intro({
   divider,
   dividerColor,
   children,
+  inline,
 }: IntroProps) {
   const align = center ? 'center' : 'left';
   let calcDividerColor: any;
@@ -71,7 +77,7 @@ export default function Intro({
     default:
       calcDividerColor = dividerColor;
   }
-  const classes = useStyles({ align, center, dividerColor: calcDividerColor });
+  const classes = useStyles({ align, center, inline, dividerColor: calcDividerColor });
 
   if (!title && !body) {
     throw new Error('Intro title and body cannot both be empty');
@@ -153,12 +159,14 @@ export default function Intro({
 
   return (
     <div className={classes.Intro}>
-      {renderIcon()}
+      {icon && <div>{renderIcon()}</div>}
       {renderSpacer(icon, 's2')}
-      {headings}
-      {renderSpacer(body, 's3')}
-      {renderBody()}
-      {children}
+      <div>
+        {headings}
+        {renderSpacer(body, 's3')}
+        {renderBody()}
+        {children}
+      </div>
     </div>
   );
 }

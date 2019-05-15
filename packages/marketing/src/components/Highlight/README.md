@@ -1,6 +1,6 @@
 ## Highlight
 
-Highlights pair well with PainPoints to increase visual appeal.
+Highlights pair well with PainPoints to increase visual appeal..
 
 ---
 
@@ -11,15 +11,47 @@ Highlights pair well with PainPoints to increase visual appeal.
 ```jsx { "props": { }}
 import PainPoint from '../PainPoint/PainPoint';
 
-<Highlight>
-  <PainPoint
-    intro={{
-      title: "Let's build something great.",
-      body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam ac tortor vitae purus faucibus.`,
-    }}
-    actions={[{ url: '#h2', content: 'Find out more', tags: ['guide'] }]}
-  />
-</Highlight>;
+<div>
+  <Highlight centerItems>
+    <PainPoint
+      padding={5}
+      intro={{
+        title: "Let's build something great.",
+        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam ac tortor vitae purus faucibus.`,
+      }}
+      centerItems
+      actions={[{ url: '#h2', content: 'Find out more', tags: ['guide'] }]}
+    />
+  </Highlight>
+  <br />
+  <br />
+  <br />
+  <br />
+  <Highlight centerItems flip>
+    <PainPoint
+      padding={5}
+      intro={{
+        title: "Or let's build something else.",
+        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam ac tortor vitae purus faucibus.`,
+      }}
+      actions={[{ url: '#h3', content: 'Find out more', tags: ['guide'] }]}
+    />
+  </Highlight>
+  <br />
+  <br />
+  <br />
+  <br />
+  <Highlight centerItems>
+    <PainPoint
+      padding={5}
+      intro={{
+        title: "Finally let's build this.",
+        body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam ac tortor vitae purus faucibus.`,
+      }}
+      actions={[{ url: '#h4', content: 'Find out more', tags: ['guide'] }]}
+    />
+  </Highlight>
+</div>;
 ```
 
 ---

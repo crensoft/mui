@@ -146,43 +146,6 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@crensoft/mui-core@file:packages/core":
-  version "0.1.0"
-  dependencies:
-    "@crensoft/mui-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-47180f99-cb7c-481d-a488-bf2925e5bace-1557895464704/node_modules/@crensoft/mui-utils"
-    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-core-0.1.0-47180f99-cb7c-481d-a488-bf2925e5bace-1557895464704/node_modules/@crensoft/test-utils"
-    "@fortawesome/fontawesome-svg-core" "^1.2.18"
-    "@fortawesome/free-brands-svg-icons" "^5.8.2"
-    "@fortawesome/free-regular-svg-icons" "^5.8.2"
-    "@fortawesome/free-solid-svg-icons" "^5.8.2"
-    "@fortawesome/react-fontawesome" "^0.1.4"
-    "@material-ui/core" "^4.0.0-beta.1"
-    "@types/react" "^16.8.17"
-    color "^3.1.1"
-    ramda "^0.26.1"
-    react "^16.8.6"
-    react-dom "^16.8.6"
-    rxjs "^6.5.2"
-
-"@crensoft/mui-utils@file:packages/mui-utils":
-  version "0.1.0"
-  dependencies:
-    "@crensoft/test-utils" "file:../../../AppData/Local/Yarn/Cache/v4/npm-@crensoft-mui-utils-0.1.0-4f340fdd-692e-4f18-a5ee-632bc026f9eb-1557895464715/node_modules/@crensoft/test-utils"
-    "@material-ui/core" "^4.0.0-beta.1"
-    "@types/react" "^16.8.17"
-    ramda "^0.26.1"
-    react "^16.8.6"
-    react-dom "^16.8.6"
-    rxjs "^6.5.2"
-
-"@crensoft/test-utils@file:packages/test-utils":
-  version "0.1.1"
-  dependencies:
-    "@types/react" "^16.8.17"
-    ramda "^0.26.1"
-    react "^16.8.6"
-    react-dom "^16.8.6"
-
 "@emotion/hash@^0.7.1":
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.7.1.tgz#9833722341379fb7d67f06a4b00ab3c37913da53"
@@ -1126,13 +1089,13 @@
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
 "@octokit/endpoint@^5.1.0":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@octokit/endpoint/-/endpoint-5.1.1.tgz#bd96a67d141bd897fd5357501fcea44791870925"
-  integrity sha512-kCv3ZyqFTWGYmvuU0TETzC4jPGzyLCJrjXp65kRe9DHyQULZak+dpwmEbT7M2rpdr/O2im8ivrPGT6J+2WsKNg==
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/@octokit/endpoint/-/endpoint-5.1.2.tgz#45fd879e33a25ee10fa4cffc4d098ee04135afe6"
+  integrity sha512-bBGGmcRFq1x0jrB29G/9KjYmO3cdHfk3476B2JOHRvLsNw1Pn3l+ZvbiqtcO9qAS4Ti+zFedLB84ziHZRZclQA==
   dependencies:
     deepmerge "3.2.0"
     is-plain-object "^3.0.0"
-    universal-user-agent "^2.0.1"
+    universal-user-agent "^2.1.0"
     url-template "^2.0.8"
 
 "@octokit/plugin-enterprise-rest@^2.1.1":
@@ -5740,7 +5703,7 @@ left-pad@^1.3.0:
   resolved "https://registry.yarnpkg.com/left-pad/-/left-pad-1.3.0.tgz#5b8a3a7765dfe001261dde915589e782f8c94d1e"
   integrity sha512-XI5MPzVNApjAyhQzphX8BkmKsKUxD4LdyK24iZeQGinBN9yTQT3bFlCBy/aVx2HrNcqQGsdot8ghrjyrvMCoEA==
 
-lerna@^3.13.4:
+lerna@^3.14.0:
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/lerna/-/lerna-3.14.0.tgz#b5485fa1614f6d25d8bf48926639f4ae9f5aa5b0"
   integrity sha512-AJobp8D/ovN6CC+nmkaTQ2KgbFH4bU2bNRaGp+30iqVoK9q0DVyAtnB7/hcql4kAE22iL/jpbKd5aSDls8oH3w==
@@ -9407,7 +9370,7 @@ unist-util-visit@^1.1.0, unist-util-visit@^1.4.0:
   dependencies:
     unist-util-visit-parents "^2.0.0"
 
-universal-user-agent@^2.0.0, universal-user-agent@^2.0.1:
+universal-user-agent@^2.0.0, universal-user-agent@^2.0.1, universal-user-agent@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/universal-user-agent/-/universal-user-agent-2.1.0.tgz#5abfbcc036a1ba490cb941f8fd68c46d3669e8e4"
   integrity sha512-8itiX7G05Tu3mGDTdNY2fB4KJ8MgZLS54RdG6PkkfwMAavrXu1mV/lls/GABx9O3Rw4PnTtasxrvbMQoBYY92Q==

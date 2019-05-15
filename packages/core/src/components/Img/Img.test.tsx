@@ -1,7 +1,7 @@
 import React from 'react';
 import { cleanup, render } from 'react-testing-library';
 import { expectRenderThrow } from '@crensoft/test-utils';
-import Image from './Image';
+import Image from './Img';
 
 afterEach(cleanup);
 

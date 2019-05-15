@@ -50,6 +50,7 @@ library.add(faCube, faCircle);
 <Intro
   title="Colorful Heading"
   icon="cube"
+  inline
   circleIcon
   titleColor="iconColor"
   iconColor="primary"

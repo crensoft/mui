@@ -19,9 +19,10 @@ export type ActionGroupProps = {
   guide?: boolean;
   children?: React.ReactNode;
   actions?: Action[];
+  center?: boolean;
 };
 
-export default function ActionGroup({ children, actions }: ActionGroupProps) {
+export default function ActionGroup({ children, actions, center }: ActionGroupProps) {
   if (!actions) {
     throw new Error('Actions required');
   }
@@ -32,5 +33,5 @@ export default function ActionGroup({ children, actions }: ActionGroupProps) {
     }
     return <Link key={url} to={url} {...action} {...opts} />;
   });
-  return <Row>{renderActions(actions)}</Row>;
+  return <Row justify={center ? 'center' : 'flex-start'}>{renderActions(actions)}</Row>;
 }

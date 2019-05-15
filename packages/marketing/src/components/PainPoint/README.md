@@ -13,6 +13,7 @@ sections aimed towards getting the user to discover about the service.
 <PainPoint
   intro={{
     title: "Let's build something great.",
+    inline: true,
     body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam ac tortor vitae purus faucibus.`,
   }}
   actions={[{ url: '#h2', content: 'Find out more', tags: ['guide'] }]}

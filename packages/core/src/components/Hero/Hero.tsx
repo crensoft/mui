@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { Row, Container, Col } from '../Layout';
 import createStyles from '../Theme/createStyles';
 import { Typography, Button } from '@material-ui/core';
-import Image from '../Image/Image';
+import Image from '../Img/Img';
 import { isObject } from 'util';
 
 const useStyles = createStyles<{ height?: number; bgColor?: string; fullHeight: boolean }>(

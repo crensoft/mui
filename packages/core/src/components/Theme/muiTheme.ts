@@ -67,7 +67,7 @@ const muiTheme = {
   },
   overrides: {
     MuiButton: {
-      // Name of the component ⚛️ / style sheet
+      // Name of the component ⚛ / style sheet
       text: {
         // Name of the rule
         color: 'white', // Some CSS
@@ -86,4 +86,4 @@ const muiTheme = {
 export type AppTheme = Theme & typeof muiTheme;
 
 export default (opts?: any): AppTheme =>
-  responsiveFontSizes(createMuiTheme(mergeDeepLeft(muiTheme, opts)));
+  responsiveFontSizes(createMuiTheme(mergeDeepLeft(muiTheme, opts))) as AppTheme;

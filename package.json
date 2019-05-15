@@ -6,7 +6,7 @@
     "@types/react-dom": "^16.8.4",
     "awesome-typescript-loader": "^5.2.1",
     "jest": "^24.8.0",
-    "lerna": "^3.13.4",
+    "lerna": "^3.14.0",
     "link-parent-bin": "^1.0.0",
     "react": "^16.8.6",
     "react-docgen-typescript": "^1.12.4",

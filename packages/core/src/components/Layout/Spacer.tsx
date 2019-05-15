@@ -3,7 +3,7 @@ import createStyles from '../Theme/createStyles';
 
 const useStyles = createStyles(theme => ({
   Spacer: ({ val }) => ({
-    margin: `${theme.spacing(val)}px 0`,
+    margin: `${theme.spacing(val)}px`,
   }),
 }));
 

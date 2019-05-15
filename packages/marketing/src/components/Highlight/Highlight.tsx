@@ -5,27 +5,41 @@ const useStyles = createStyles(theme => ({
   Highlight: () => ({
     textAlign: 'left',
   }),
+  HighlightMain: ({ centerItems }) => {
+    const styles: any = {};
+    if (centerItems) {
+      styles.display = 'flex';
+      styles.alignItems = 'center';
+    }
+    return styles;
+  },
 }));
 
 type Props = {
   children?: ReactNode;
   illustration?: any;
+  centerItems?: boolean;
+  flip?: boolean;
 };
 
-export default function Highlight({ children }: Props) {
-  const classes = useStyles();
+export default function Highlight({ children, centerItems, flip }: Props) {
+  const classes = useStyles({ centerItems });
 
   const contentItems = [
-    <Col key="main" xs={12} sm={6}>
+    <Col className={classes.HighlightMain} key="main" xs={12} sm={6}>
       {children}
     </Col>,
   ];
 
   contentItems.push(
-    <Col key="visual">
-      <Img alt="visuals" src="/illustrations/undraw_wordpress.svg" />
+    <Col key="visual" xs={12} sm={6}>
+      <Img responsive alt="visuals" src="/illustrations/undraw_wordpress.svg" />
     </Col>,
   );
+
+  if (flip) {
+    contentItems.reverse();
+  }
   return (
     <section className={classes.Highlight}>
       <Container>

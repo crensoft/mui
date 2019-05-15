@@ -24,9 +24,9 @@
     "/lib"
   ],
   "dependencies": {
-    "@crensoft/mui-core": "file:../core",
-    "@crensoft/mui-utils": "file:../mui-utils",
-    "@crensoft/test-utils": "file:../test-utils",
+    "@crensoft/mui-core": "^0.1.0",
+    "@crensoft/mui-utils": "^0.1.0",
+    "@crensoft/test-utils": "^0.1.0",
     "@material-ui/core": "^4.0.0-beta.1",
     "@types/react": "^16.8.17",
     "color": "^3.1.1",
