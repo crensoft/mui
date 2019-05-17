@@ -14,6 +14,9 @@ const actions = [
   {
     url: '#1',
     content: 'Buy now',
+    prominent: true,
+    primary: true,
+    large: true,
   },
 ];
 <Hero centerItems title="My Hero" body={body} actions={actions} />;

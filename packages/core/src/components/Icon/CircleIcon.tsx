@@ -42,7 +42,7 @@ const CircleIcon: React.FunctionComponent<Props> = ({
 
   return (
     <div className={classes.CircleIcon}>
-      <Icon label={label} icon={icon} size={size} color={color} />
+      <Icon label={label} icon={icon} size={size} color={color} fixedWidth />
     </div>
   );
 };

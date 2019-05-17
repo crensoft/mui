@@ -18,7 +18,8 @@
     "resolveJsonModule": true,
     "baseUrl": "./",
     "paths": {
-      "@crensoft/*": ["packages/*/src"]
+      "@crensoft/*": ["packages/*/src"],
+      "*": ["*"]
     }
   },
   "include": ["packages/*/src"],

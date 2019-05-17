@@ -174,7 +174,7 @@ export default function Intro({
       {renderSpacer(icon, 's2')}
       <div>
         {headings}
-        {renderSpacer(body, 's3')}
+        {renderSpacer(body, 's3', h1 ? 1.2 : 1)}
         {renderBody()}
         {children}
       </div>

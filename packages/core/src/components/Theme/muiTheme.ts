@@ -10,7 +10,7 @@ const muiTheme = {
     sizes: {
       sm: 48,
       md: 64,
-      lg: 90,
+      lg: 81,
     },
     height(size?: 'sm' | 'md' | 'lg') {
       return size ? this.sizes[size] : this.sizes.md;
@@ -63,6 +63,15 @@ const muiTheme = {
     },
     subtitle1: {
       lineHeight: 1.3,
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1200,
+      xl: 1920,
     },
   },
   overrides: {

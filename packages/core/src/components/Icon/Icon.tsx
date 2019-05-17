@@ -34,6 +34,7 @@ type Props = {
   mask?: any;
   transform?: string;
   color?: string;
+  fixedWidth?: boolean;
 };
 
 const Icon: React.FunctionComponent<Props> = ({
@@ -46,6 +47,7 @@ const Icon: React.FunctionComponent<Props> = ({
   label,
   stack,
   color,
+  fixedWidth,
 }) => {
   const classes = useStyles({ size });
   const theme = useTheme<AppTheme>();
@@ -71,6 +73,7 @@ const Icon: React.FunctionComponent<Props> = ({
         mask={mask}
         icon={icon}
         size={size}
+        fixedWidth={fixedWidth}
         aria-hidden
       />
     );

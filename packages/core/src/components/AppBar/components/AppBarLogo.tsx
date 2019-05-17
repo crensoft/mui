@@ -5,7 +5,7 @@ import { AppTheme } from '../../Theme/muiTheme';
 
 const useStyles = makeStyles<AppTheme>(theme => ({
   ['appbar-logo']: {
-    maxWidth: 200,
+    maxWidth: 150,
     height: '100%',
     display: 'flex',
     flexGrow: 1,

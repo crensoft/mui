@@ -25,11 +25,12 @@ export default function PainPoint({
   ...intro
 }: PainPointProps) {
   const classes = useStyles({ padding });
+  const spacing = intro.h1 ? 2 : 1;
   return (
     <div className={classes.PainPoint}>
       <Intro center={center} {...intro}>
         {children}
-        {actions && <Spacer val={1} />}
+        {actions && <Spacer val={spacing} />}
         {actions && <ActionGroup center={center} actions={actions} />}
       </Intro>
     </div>

@@ -1,9 +1,11 @@
 import React, { ReactNode, createContext } from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles, useTheme } from '@material-ui/styles';
-import Container from '../Layout/Container';
-import { pick } from 'ramda';
 import { AppBar as BaseAppBar } from '@material-ui/core';
+import { pick } from 'ramda';
+import useScrollEffect from './useScrollEffect';
+import Container from '../Layout/Container';
+
 import { AppTheme } from '../Theme/muiTheme';
 
 const useStyles = makeStyles<AppTheme, Props>(theme => ({
@@ -34,6 +36,7 @@ type Props = {
   colorScale?: number;
   paletteType?: 'dark' | 'light' | 'main';
   large?: boolean;
+  scrollTarget?: any;
 };
 
 export const AppBarContext = createContext({
@@ -47,7 +50,10 @@ export default function AppBar({
   elevation = 0,
   fluid = false,
   large,
+  scrollTarget,
 }: Props) {
+  const scrollTrigger = useScrollEffect({ scrollTarget });
+  const calcElevation = scrollTrigger ? 2 : elevation;
   const theme = useTheme<AppTheme>();
   const size = large ? 'lg' : 'md';
   const classes = useStyles({ fluid, size, color, paletteType });
@@ -59,7 +65,7 @@ export default function AppBar({
         <BaseAppBar
           component="nav"
           color="default"
-          elevation={elevation}
+          elevation={calcElevation}
           classes={pick(['root', 'colorDefault'], classes)}
         >
           <Container fluid={fluid} center>

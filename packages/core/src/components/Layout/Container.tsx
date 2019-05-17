@@ -32,7 +32,7 @@ export interface ContainerProps extends Pick<BaseContainerProps, 'maxWidth'> {
  */
 export default function Container({
   children,
-  maxWidth,
+  maxWidth = 'lg',
   center = false,
   fluid = false,
 }: ContainerProps) {
