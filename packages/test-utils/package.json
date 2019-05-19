@@ -11,10 +11,9 @@
     "react-dom": "^16.8.6"
   },
   "scripts": {
-    "iprepare": "yarn run tsc && echo 'Finished building NPM package'",
-    "tsc": "tsc",
-    "prepare": "tsc",
-    "tsc-w": "tsc -w"
+    "prepare": "yarn run build && echo 'Finished building NPM package'",
+    "build": "tsc",
+    "build:watch": "tsc -w"
   },
   "types": "./lib/index.d.ts",
   "files": [
@@ -22,8 +21,6 @@
   ],
   "dependencies": {
     "@types/react": "^16.8.17",
-    "ramda": "^0.26.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "ramda": "^0.26.1"
   }
 }

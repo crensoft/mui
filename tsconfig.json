@@ -10,7 +10,7 @@
     "noUnusedLocals": true,
     "experimentalDecorators": true,
     "declaration": true,
-    "sourceMap": true,
+    "inlineSourceMap": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "noErrorTruncation": true,
@@ -18,10 +18,9 @@
     "resolveJsonModule": true,
     "baseUrl": "./",
     "paths": {
-      "@crensoft/*": ["packages/*/src"],
-      "*": ["*"]
+      "@crensoft/*": ["packages/*/src"]
     }
   },
   "include": ["packages/*/src"],
-  "exclude": ["node_modules", "lib"]
+  "exclude": ["node_modules", "**/lib/**", "**/*.test.ts", "**/*.test.tsx"]
 }

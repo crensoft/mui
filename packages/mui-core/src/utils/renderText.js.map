@@ -1,0 +1,1 @@
+{"version":3,"file":"renderText.js","sourceRoot":"","sources":["renderText.tsx"],"names":[],"mappings":";;;;;;;;;;;;;;;;AAAA,gDAAyC;AACzC,4EAA2E;AAE3E,IAAM,UAAU,GAAG,UAAC,KAAyC,EAAE,IAAwB;IACrF,IAAI,CAAC,IAAI;QAAE,OAAO,IAAI,CAAC;IAEvB,OAAO,8BAAC,oBAAU,eAAK,KAAK,GAAG,IAAI,CAAc,CAAC;AACpD,CAAC,CAAC;AAEF,kBAAe,UAAU,CAAC"}

@@ -11,13 +11,12 @@
     "react-dom": "^16.8.6"
   },
   "scripts": {
-    "iprepare": "yarn run tsc && echo 'Finished building NPM package'",
+    "prepare": "yarn run build && echo 'Finished building NPM package'",
+    "prepublishOnly": "yarn run test",
     "test": "jest --colors",
-    "test-watch": "jest --colors --watch",
-    "tsc": "tsc",
-    "tsc-w": "tsc -w",
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "test:watch": "jest --colors --watch",
+    "build": "tsc",
+    "build:watch": "tsc -w"
   },
   "types": "./lib/index.d.ts",
   "files": [
@@ -25,11 +24,6 @@
   ],
   "dependencies": {
     "@crensoft/test-utils": "^0.1.0",
-    "@material-ui/core": "^4.0.0-beta.1",
-    "@types/react": "^16.8.17",
-    "ramda": "^0.26.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "rxjs": "^6.5.2"
+    "@types/react": "^16.8.17"
   }
 }
