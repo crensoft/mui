@@ -10,19 +10,19 @@ module.exports = {
   sections: [
     {
       name: 'Core',
-      components: ['./packages/core/src/components/**/*.tsx'],
+      components: ['./packages/mui-core/src/components/**/*.tsx'],
       sectionDepth: 2,
     },
     {
       name: 'Marketing',
-      components: ['./packages/marketing/src/components/**/*.tsx'],
+      components: ['./packages/mui-marketing/src/components/**/*.tsx'],
       sectionDepth: 2,
     },
   ],
-  assetsDir: ['./packages/core/assets', './packages/marketing/assets'],
-  ignore: ['**/lib/**', '**/*.test.tsx'],
+  assetsDir: ['./packages/mui-core/assets', './packages/mui-marketing/assets'],
+  ignore: ['**/lib/**', '**/*.test.tsx', '**/node_modules/**'],
   styleguideComponents: {
-    Wrapper: path.join(__dirname, 'packages/core/src/components/Styleguide/FrameWrapper'),
+    Wrapper: path.join(__dirname, 'packages/mui-core/src/components/Styleguide/FrameWrapper'),
   },
   template: {
     head: {

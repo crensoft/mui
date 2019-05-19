@@ -7,9 +7,11 @@
     "moduleResolution": "node",
     // "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "isolatedModules": true,
     "noUnusedLocals": true,
     "experimentalDecorators": true,
-    "declaration": true,
+    // "declaration": true,
+    "sourceMap": false,
     "inlineSourceMap": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -22,5 +24,9 @@
     }
   },
   "include": ["packages/*/src"],
-  "exclude": ["node_modules", "**/lib/**", "**/*.test.ts", "**/*.test.tsx"]
+  "exclude": ["node_modules", "**/lib/**", "**/*.test.ts", "**/*.test.tsx"],
+  "awesomeTypescriptLoaderOptions": {
+    "useCache": true,
+    "reportFiles": ["src/**/*.{ts,tsx}"]
+  }
 }
