@@ -12,11 +12,11 @@ const useStyles = createStyles(
     },
     svg: () => ({
       flexGrow: 1,
-      // prevent extra whitespace
-      display: 'block',
       '& svg': {
         maxWidth: '100%',
         height: 'auto',
+        // prevent extra whitespace
+        display: 'block',
       },
     }),
   }),
@@ -26,20 +26,23 @@ const useStyles = createStyles(
 );
 
 export interface ImageProps {
-  src: string;
-  alt: string;
+  src?: string;
+  alt?: string;
+  svg?: React.ReactNode;
   responsive?: boolean;
 }
 
-export default function Image({ src, alt, responsive }: ImageProps) {
+export default function Image({ src, svg, alt, responsive }: ImageProps) {
   if (!alt) {
     throw new Error('Alt text required');
   }
   const classes = useStyles({ responsive });
 
   let html = null;
-  if (/\.svg$/.test(src)) {
+  if (src && /\.svg$/.test(src)) {
     html = <Svg className={classes.svg} src={src} />;
+  } else if (svg) {
+    html = <div className={classes.svg}>{svg}</div>;
   } else {
     html = <img className={classes.image} src={src} alt={alt} />;
   }

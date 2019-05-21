@@ -14,10 +14,21 @@ interface HeroProps extends PainPointProps, HighlightProps {
   title: PainPointProps['title'];
 }
 
-export default function Hero({ whitespace, centerItems, center, ...props }: HeroProps) {
+export default function Hero({
+  whitespace,
+  centerItems,
+  center,
+  illustration,
+  ...props
+}: HeroProps) {
   const classes = useStyles();
   return (
-    <Highlight custom={classes} whitespace={whitespace} centerItems={centerItems}>
+    <Highlight
+      custom={classes}
+      whitespace={whitespace}
+      illustration={illustration}
+      centerItems={centerItems}
+    >
       <PainPoint h1 center={center} {...props} />
     </Highlight>
   );

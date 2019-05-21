@@ -29,6 +29,7 @@ export default function Highlight({
   centerItems,
   flip,
   custom = {},
+  illustration,
   ...props
 }: HighlightProps) {
   const classes = useStyles({ centerItems });
@@ -41,7 +42,7 @@ export default function Highlight({
 
   contentItems.push(
     <Col key="visual" xs={12} sm={6}>
-      <Img responsive alt="visuals" src="/illustrations/undraw_wordpress.svg" />
+      <Img responsive alt="visuals" svg={illustration} />
     </Col>,
   );
 

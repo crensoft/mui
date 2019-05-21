@@ -37,8 +37,5 @@
     "react-scroll": "^1.7.11",
     "react-svg": "^10.0.2",
     "rxjs": "^6.5.2"
-  },
-  "devDependencies": {
-    "@types/react-scroll": "^1.5.4"
   }
 }

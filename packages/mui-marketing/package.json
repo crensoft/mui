@@ -21,7 +21,8 @@
   },
   "types": "./lib/index.d.ts",
   "files": [
-    "/lib"
+    "/lib",
+    "assets"
   ],
   "dependencies": {
     "@crensoft/mui-core": "^0.1.0",
