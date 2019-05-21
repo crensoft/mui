@@ -1,16 +1,21 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
 import Image from '../../Img/Img';
-import { AppTheme } from '../../Theme/muiTheme';
+import createStyles from '../../Theme/createStyles';
 
-const useStyles = makeStyles<AppTheme>(theme => ({
-  ['appbar-logo']: {
-    maxWidth: 150,
-    height: '100%',
-    display: 'flex',
-    flexGrow: 1,
+const useStyles = createStyles(
+  theme => ({
+    root: {
+      maxWidth: 150,
+      height: '100%',
+      display: 'flex',
+      flexGrow: 1,
+      alignItems: 'center',
+    },
+  }),
+  {
+    name: 'MuiAppbarLogo',
   },
-}));
+);
 
 type Props = {
   img?: string;
@@ -18,7 +23,5 @@ type Props = {
 
 export default function AppBarLogo({ img }: Props) {
   const classes = useStyles();
-  return (
-    <div className={classes['appbar-logo']}>{img && <Image src={img} alt="Home" responsive />}</div>
-  );
+  return <div className={classes.root}>{img && <Image src={img} alt="Home" responsive />}</div>;
 }

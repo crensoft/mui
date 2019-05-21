@@ -13,7 +13,7 @@ const useStyles = createStyles(theme => ({
     flexGrow: 1,
   },
   colorDefault: ({ color = 'neutral', paletteType }) => ({
-    backgroundColor: Boolean(console.log(theme)) || theme.palette.getColor(color, paletteType),
+    backgroundColor: theme.palette.getColor(color, paletteType),
   }),
   toolbar: ({ size }) => ({
     justifyContent: 'space-between',

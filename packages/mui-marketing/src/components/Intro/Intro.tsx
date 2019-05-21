@@ -11,8 +11,9 @@ const useStyles = createStyles(theme => ({
     display: 'flex',
   }),
   IntroDivider: ({ dividerColor, center }) => ({
-    maxWidth: 120,
+    maxWidth: 75,
     margin: center ? 'auto' : 0,
+    height: 2,
     backgroundColor:
       theme.palette.getColor(dividerColor) || theme.palette.getColor('neutral', 'dark'),
   }),
@@ -37,7 +38,7 @@ export type IntroProps = {
   iconBgColor?: string;
   circleIcon?: boolean;
   titleColor?: string;
-  divider?: 'header' | 'footer';
+  divider?: boolean | 'header' | 'footer';
   dividerColor?: string;
   /** display icon on same line as content */
   inline?: boolean;

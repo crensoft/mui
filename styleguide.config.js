@@ -20,7 +20,7 @@ module.exports = {
     },
   ],
   assetsDir: ['./packages/mui-core/assets', './packages/mui-marketing/assets'],
-  ignore: ['**/lib/**', '**/*.test.tsx', '**/node_modules/**'],
+  ignore: ['**/lib/**', 'lib', , 'node_modules', '**/*.test.tsx', '**/node_modules/**'],
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'packages/mui-core/src/components/Styleguide/FrameWrapper'),
   },

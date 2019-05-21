@@ -1,7 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import Svg from 'react-svg';
+import createStyles from '../Theme/createStyles';
 
-const useStyles = makeStyles(
+const useStyles = createStyles(
   theme => ({
     image: ({ responsive }: Partial<ImageProps>) => {
       if (responsive) {
@@ -9,9 +10,18 @@ const useStyles = makeStyles(
       }
       return {};
     },
+    svg: () => ({
+      flexGrow: 1,
+      // prevent extra whitespace
+      display: 'block',
+      '& svg': {
+        maxWidth: '100%',
+        height: 'auto',
+      },
+    }),
   }),
   {
-    name: 'mui',
+    name: 'Mui2Img',
   },
 );
 
@@ -27,5 +37,11 @@ export default function Image({ src, alt, responsive }: ImageProps) {
   }
   const classes = useStyles({ responsive });
 
-  return <img className={classes.image} src={src} alt={alt} />;
+  let html = null;
+  if (/\.svg$/.test(src)) {
+    html = <Svg className={classes.svg} src={src} />;
+  } else {
+    html = <img className={classes.image} src={src} alt={alt} />;
+  }
+  return html;
 }

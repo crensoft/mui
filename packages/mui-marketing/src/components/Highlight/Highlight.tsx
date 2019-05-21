@@ -24,7 +24,13 @@ export type HighlightProps = {
   custom?: any;
 } & MarketSectionProps;
 
-export default function Highlight({ children, centerItems, flip, custom = {} }: HighlightProps) {
+export default function Highlight({
+  children,
+  centerItems,
+  flip,
+  custom = {},
+  ...props
+}: HighlightProps) {
   const classes = useStyles({ centerItems });
 
   const contentItems = [
@@ -43,7 +49,7 @@ export default function Highlight({ children, centerItems, flip, custom = {} }: 
     contentItems.reverse();
   }
   return (
-    <MarketSection className={classes.Highlight}>
+    <MarketSection {...props}>
       <Row className={`${custom.HighlightContent}`}>{contentItems}</Row>
     </MarketSection>
   );
