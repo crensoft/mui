@@ -1,6 +1,6 @@
 {
   "name": "@crensoft/mui-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Material UI utils",
   "main": "./lib/index.js",
   "repository": "https://github.com/crensoft/mui",
