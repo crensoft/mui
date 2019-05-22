@@ -22,6 +22,7 @@ export type LinkProps = {
   children?: React.ReactNode;
   content?: React.ReactNode;
   component?: React.ReactElement;
+  title?: string;
 };
 
 export default function Link({ component, children, content, to, guide, ...other }: LinkProps) {

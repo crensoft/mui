@@ -19,9 +19,12 @@ const useStyles = createStyles(
 
 type Props = {
   img?: string;
+  svg?: any;
 };
 
-export default function AppBarLogo({ img }: Props) {
+export default function AppBarLogo({ img, svg }: Props) {
   const classes = useStyles();
-  return <div className={classes.root}>{img && <Image src={img} alt="Home" responsive />}</div>;
+  return (
+    <div className={classes.root}>{img && <Image svg={svg} src={img} alt="Home" responsive />}</div>
+  );
 }

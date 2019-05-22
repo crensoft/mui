@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import { Container as BaseContainer } from '@material-ui/core';
 import { ContainerProps as BaseContainerProps } from '@material-ui/core/Container';
 import createStyles from '../Theme/createStyles';
+import { CSSProperties } from '@material-ui/styles';
 
 const useStyles = createStyles(
   theme => ({
@@ -25,6 +26,7 @@ export interface ContainerProps extends Pick<BaseContainerProps, 'maxWidth'> {
   children?: ReactNode;
   fluid?: boolean;
   center?: boolean;
+  style?: CSSProperties;
 }
 
 /**
@@ -35,10 +37,11 @@ export default function Container({
   maxWidth = 'lg',
   center = false,
   fluid = false,
+  style,
 }: ContainerProps) {
   const classes = useStyles({ fluid, center });
   return (
-    <BaseContainer maxWidth={maxWidth} className={classes.root}>
+    <BaseContainer style={style} maxWidth={maxWidth} className={classes.root}>
       {children}
     </BaseContainer>
   );

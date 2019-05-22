@@ -12,11 +12,18 @@ const useStyles = createStyles(
     },
     svg: () => ({
       flexGrow: 1,
+      display: 'flex',
+      alignItems: 'center',
+      maxHeight: '100%',
+      '& > div': {
+        display: 'flex',
+        flexGrow: 1,
+      },
       '& svg': {
         maxWidth: '100%',
-        height: 'auto',
+        maxHeight: '100%',
         // prevent extra whitespace
-        display: 'block',
+        flexGrow: 1,
       },
     }),
   }),
@@ -30,19 +37,24 @@ export interface ImageProps {
   alt?: string;
   svg?: React.ReactNode;
   responsive?: boolean;
+  height?: any;
 }
 
-export default function Image({ src, svg, alt, responsive }: ImageProps) {
+export default function Image({ src, svg, alt, height, responsive }: ImageProps) {
   if (!alt) {
     throw new Error('Alt text required');
   }
   const classes = useStyles({ responsive });
-
+  const style = height ? { height } : {};
   let html = null;
   if (src && /\.svg$/.test(src)) {
     html = <Svg className={classes.svg} src={src} />;
   } else if (svg) {
-    html = <div className={classes.svg}>{svg}</div>;
+    html = (
+      <div style={style} className={classes.svg}>
+        {svg}
+      </div>
+    );
   } else {
     html = <img className={classes.image} src={src} alt={alt} />;
   }

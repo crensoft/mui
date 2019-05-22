@@ -3,21 +3,26 @@ import { renderText, createStyles, Icon, CircleIcon, Spacer, Container } from '@
 import { Avatar, Divider } from '@material-ui/core';
 import { TypographyProps } from '@material-ui/core/Typography';
 
-const useStyles = createStyles(theme => ({
-  Intro: ({ align, inline, center }) => ({
-    textAlign: align,
-    flexDirection: inline ? 'row' : 'column',
-    justifyContent: center ? 'center' : 'flex-start',
-    display: 'flex',
+const useStyles = createStyles(
+  theme => ({
+    root: ({ align, inline, center }) => ({
+      textAlign: align,
+      flexDirection: inline ? 'row' : 'column',
+      justifyContent: center ? 'center' : 'flex-start',
+      display: 'flex',
+    }),
+    IntroDivider: ({ dividerColor, center }) => ({
+      maxWidth: 75,
+      margin: center ? 'auto' : 0,
+      height: 2,
+      backgroundColor:
+        theme.palette.getColor(dividerColor) || theme.palette.getColor('neutral', 'dark'),
+    }),
   }),
-  IntroDivider: ({ dividerColor, center }) => ({
-    maxWidth: 75,
-    margin: center ? 'auto' : 0,
-    height: 2,
-    backgroundColor:
-      theme.palette.getColor(dividerColor) || theme.palette.getColor('neutral', 'dark'),
-  }),
-}));
+  {
+    name: 'MuiIntro',
+  },
+);
 
 export type IntroProps = {
   title?: ReactNode;
@@ -42,7 +47,13 @@ export type IntroProps = {
   dividerColor?: string;
   /** display icon on same line as content */
   inline?: boolean;
-  h1?: boolean;
+  page?: boolean;
+  xl?: boolean;
+  lg?: boolean;
+  md?: boolean;
+  sm?: boolean;
+  xs?: boolean;
+  condensed?: boolean;
 };
 
 export default function Intro({
@@ -63,7 +74,13 @@ export default function Intro({
   dividerColor,
   children,
   inline,
-  h1,
+  page,
+  xl,
+  lg,
+  md,
+  sm,
+  xs,
+  condensed,
 }: IntroProps) {
   const align = center ? 'center' : 'left';
   let calcDividerColor: any;
@@ -88,8 +105,18 @@ export default function Intro({
   }
   const renderTitle = () => {
     let titleTag: TypographyProps['variant'] = main ? 'h2' : 'h3';
-    if (h1) {
+    if (page) {
       titleTag = 'h1';
+    } else if (xl) {
+      titleTag = 'h2';
+    } else if (lg) {
+      titleTag = 'h3';
+    } else if (md) {
+      titleTag = 'h4';
+    } else if (sm) {
+      titleTag = 'h5';
+    } else if (xs) {
+      titleTag = 'h6';
     }
     let calcTitleColor: any;
     // xxx: should omit self
@@ -120,10 +147,23 @@ export default function Intro({
   const renderBody = () => {
     let bodyVariant: TypographyProps['variant'] = main ? 'body1' : 'body2';
     let maxWidth: any = 'sm';
-    if (h1) {
-      maxWidth = 'xs';
+    if (page) {
       bodyVariant = 'body1';
+    } else if (xl) {
+      bodyVariant = 'body1';
+    } else if (lg) {
+      bodyVariant = 'body1';
+    } else if (md) {
+      bodyVariant = 'body2';
+      maxWidth = 'xs';
+    } else if (sm) {
+      bodyVariant = 'body2';
+      maxWidth = 'xs';
+    } else if (xs) {
+      bodyVariant = 'body2';
+      maxWidth = 'xs';
     }
+
     const ele = renderText({ key: 'body', align, variant: bodyVariant }, body);
     return (
       ele && (
@@ -147,6 +187,7 @@ export default function Intro({
       label: 'icon',
       color: iconColor,
       bgColor: iconBgColor,
+      fixedWidth: true,
     };
     if (circleIcon) {
       return <CircleIcon bgColor={iconBgColor} {...iconProps} />;
@@ -170,12 +211,12 @@ export default function Intro({
   }
 
   return (
-    <div className={classes.Intro}>
+    <div className={classes.root}>
       {icon && <div>{renderIcon()}</div>}
       {renderSpacer(icon, 's2')}
       <div>
         {headings}
-        {renderSpacer(body, 's3', h1 ? 1.2 : 1)}
+        {condensed || renderSpacer(body, 's3', 1.1)}
         {renderBody()}
         {children}
       </div>
