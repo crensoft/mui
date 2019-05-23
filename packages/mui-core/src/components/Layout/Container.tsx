@@ -4,17 +4,18 @@ import { Container as BaseContainer } from '@material-ui/core';
 import { ContainerProps as BaseContainerProps } from '@material-ui/core/Container';
 import createStyles from '../Theme/createStyles';
 import { CSSProperties } from '@material-ui/styles';
+import clsx from 'clsx';
 
 const useStyles = createStyles(
   theme => ({
-    root: (props: any) => {
-      if (!props.center) {
-        return {
-          padding: 0,
-          margin: 0,
-        };
-      }
-      return {};
+    root: {
+      margin: 0,
+      '& &': {
+        padding: 0,
+      },
+    },
+    center: {
+      margin: 'auto',
     },
   }),
   {
@@ -27,6 +28,7 @@ export interface ContainerProps extends Pick<BaseContainerProps, 'maxWidth'> {
   fluid?: boolean;
   center?: boolean;
   style?: CSSProperties;
+  className?: string;
 }
 
 /**
@@ -38,10 +40,12 @@ export default function Container({
   center = false,
   fluid = false,
   style,
+  className,
 }: ContainerProps) {
-  const classes = useStyles({ fluid, center });
+  const classes = useStyles({ fluid });
+  const cl = clsx(classes.root, center && classes.center, className);
   return (
-    <BaseContainer style={style} maxWidth={maxWidth} className={classes.root}>
+    <BaseContainer style={style} maxWidth={maxWidth} className={cl}>
       {children}
     </BaseContainer>
   );

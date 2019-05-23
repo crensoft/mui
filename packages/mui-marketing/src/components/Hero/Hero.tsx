@@ -28,6 +28,7 @@ export default function Hero({
       whitespace={whitespace}
       illustration={illustration}
       centerItems={centerItems}
+      graphicBottom
     >
       <PainPoint h1 center={center} {...props} />
     </Highlight>

@@ -33,7 +33,7 @@ export default function IconList({ items, bullet, bulletColor }: IconListProps) 
   const theme = useTheme<AppTheme>();
   const iconColor = bulletColor ? theme.palette.getColor(bulletColor) : '';
   const renderRows = renderMap<IconListItem>(({ icon, content }) => (
-    <Row key={icon} className={classes.item} spacing={1}>
+    <Row key={icon || content} className={classes.item} spacing={1}>
       <Col>
         <FontAwesomeIcon color={iconColor} fixedWidth icon={icon || bullet} size="lg" aria-hidden />
       </Col>

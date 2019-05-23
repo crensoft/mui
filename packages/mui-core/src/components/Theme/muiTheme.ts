@@ -1,7 +1,7 @@
 import { createMuiTheme, Theme } from '@material-ui/core';
 // @ts-ignore
 import responsiveFontSizes from '@material-ui/core/styles/responsiveFontSizes';
-import { grey } from '@material-ui/core/colors';
+import { grey, blue, green } from '@material-ui/core/colors';
 import { mergeDeepLeft } from 'ramda';
 // import { dark } from '@material-ui/core/styles/createPalette';
 
@@ -19,6 +19,11 @@ const muiTheme = {
   palette: {
     tonalOffset: 0.5,
     contrastThreshold: 4.5,
+    tertiary: {
+      light: green[300],
+      main: green[500],
+      dark: green[700],
+    },
     neutral: {
       light: grey[300],
       main: grey[500],
@@ -29,10 +34,19 @@ const muiTheme = {
       name: keyof Theme['palette'] | keyof Theme['palette']['common'] | 'neutral',
       paletteType?: 'light' | 'dark' | 'main',
     ) {
-      if (this[name]) {
-        return this[name][paletteType || this.type];
+      let type = paletteType || this.type;
+      let color = name;
+      if (/\./.test(name)) {
+        [color, type] = name.split('.') as any;
       }
-      return this.common[name] || name;
+      if (this[color]) {
+        return this[color][type];
+      }
+      return this.common[color] || color;
+    },
+    actions: {
+      cta: blue[500],
+      info: blue[500],
     },
   },
   typography: {
@@ -95,4 +109,4 @@ const muiTheme = {
 export type AppTheme = Theme & typeof muiTheme;
 
 export default (opts?: any): AppTheme =>
-  responsiveFontSizes(createMuiTheme(mergeDeepLeft(muiTheme, opts))) as AppTheme;
+  responsiveFontSizes(createMuiTheme(mergeDeepLeft(opts, muiTheme))) as AppTheme;

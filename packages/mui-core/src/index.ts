@@ -12,3 +12,4 @@ export { default as LinkList } from './components/Lists/LinkList';
 export { default as IconList } from './components/Lists/IconList';
 export { default as ScrollTop } from './components/Scroll/ScrollTop';
 export { default as Content } from './components/Layout/Content';
+export { default as Theme } from './components/Theme/Theme';

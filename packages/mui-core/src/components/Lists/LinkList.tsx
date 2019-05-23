@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { renderMap } from '@crensoft/mui-utils';
 import { Row, Col } from '../Layout';
 import createStyles from '../Theme/createStyles';
-import Link from '../Actions/components/Link';
+import Link from '../Actions/components/ActionLink';
 
 const useStyles = createStyles(
   theme => ({

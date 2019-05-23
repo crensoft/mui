@@ -5,6 +5,7 @@ import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import createStyles from '../Theme/createStyles';
+import Icon from '../Icon/Icon';
 
 const useStyles = createStyles(
   theme => ({
@@ -29,7 +30,7 @@ export default function ScrollTop({ className }: { className: string }) {
   const cl = clsx(classes.root, className);
   return (
     <IconButton className={cl} onClick={scrollToTop}>
-      <FontAwesomeIcon icon={faChevronCircleUp} />
+      <Icon size="1x" label="arrow up" icon={faChevronCircleUp} />
     </IconButton>
   );
 }

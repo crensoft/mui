@@ -26,7 +26,7 @@ export default function FrameWrapper({
   };
   return (
     <div style={style} className={enableFullscreen ? '' : classes['frame-wrapper']}>
-      <Theme>{children}</Theme>
+      {children}
     </div>
   );
 }

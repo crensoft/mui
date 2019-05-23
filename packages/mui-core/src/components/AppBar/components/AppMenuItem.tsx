@@ -1,7 +1,8 @@
 import React from 'react';
-import { makeStyles, Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import { AppTheme } from '../../Theme/muiTheme';
 import { ButtonProps } from '@material-ui/core/Button';
+import ActionLink from '../../Actions/components/ActionLink';
 
 const useStyles = makeStyles<AppTheme, { ctxColor: string }>(theme => ({
   ['appmenu-item']: ({ ctxColor }) => ({
@@ -24,8 +25,8 @@ type AppMenuItemProps = {
 export default function AppMenuItem({ title, ctxColor, btn = {} }: AppMenuItemProps) {
   const classes = useStyles({ ctxColor });
   return (
-    <Button className={classes['appmenu-item']} key={title} {...btn}>
+    <ActionLink className={classes['appmenu-item']} key={title} {...btn}>
       {title}
-    </Button>
+    </ActionLink>
   );
 }

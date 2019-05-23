@@ -124,9 +124,6 @@ export default function Intro({
       case 'iconColor':
         calcTitleColor = iconColor;
         break;
-      case 'titleColor':
-        calcTitleColor = titleColor;
-        break;
       case 'iconBgColor':
         calcTitleColor = iconBgColor;
         break;
