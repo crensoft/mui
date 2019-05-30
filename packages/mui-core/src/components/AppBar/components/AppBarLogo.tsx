@@ -25,6 +25,8 @@ type Props = {
 export default function AppBarLogo({ img, svg }: Props) {
   const classes = useStyles();
   return (
-    <div className={classes.root}>{img && <Image svg={svg} src={img} alt="Home" responsive />}</div>
+    <div className={classes.root}>
+      {(img || svg) && <Image svg={svg} src={img} alt="Home" responsive />}
+    </div>
   );
 }

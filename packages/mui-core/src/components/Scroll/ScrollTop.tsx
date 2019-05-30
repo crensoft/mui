@@ -2,7 +2,6 @@ import React from 'react';
 import { animateScroll } from 'react-scroll';
 import { IconButton } from '@material-ui/core';
 import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import createStyles from '../Theme/createStyles';
 import Icon from '../Icon/Icon';

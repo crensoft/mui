@@ -1,6 +1,6 @@
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/styles';
-import { AppTheme } from '@crensoft/mui-core/lib/components/Theme/muiTheme';
+import { AppTheme } from '../Theme/muiTheme';
 
 export default function useMobile() {
   const theme = useTheme<AppTheme>();
