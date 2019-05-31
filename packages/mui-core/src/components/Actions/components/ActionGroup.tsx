@@ -19,12 +19,12 @@ export default function ActionGroup({ children, actions, center }: ActionGroupPr
   if (!actions) {
     throw new Error('Actions required');
   }
-  const renderActions = renderMap(({ url, tags = [], ...action }) => {
+  const renderActions = renderMap(({ to, tags = [], ...action }) => {
     const opts: any = {};
     if (contains('guide', tags)) {
       opts.guide = true;
     }
-    return <ActionLink key={url} to={url} {...action} {...opts} />;
+    return <ActionLink key={to} to={to} {...action} {...opts} />;
   });
   return <Row justify={center ? 'center' : 'flex-start'}>{renderActions(actions)}</Row>;
 }
