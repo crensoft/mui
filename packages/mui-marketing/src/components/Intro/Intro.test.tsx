@@ -1,7 +1,7 @@
 import React from 'react';
 import { cleanup, render } from 'react-testing-library';
-import FrameWrapper from '@crensoft/mui-core/lib/components/Styleguide/FrameWrapper';
 import Intro from './Intro';
+import { Theme } from '@crensoft/mui-core';
 
 afterEach(cleanup);
 
@@ -22,9 +22,9 @@ Nullam ac tortor vitae purus faucibus.`,
 
 test('should render', () => {
   const { getByText } = render(
-    <FrameWrapper>
+    <Theme>
       <Intro {...sample} />
-    </FrameWrapper>,
+    </Theme>,
   );
 
   ['label', 'title', 'body'].map(field => {

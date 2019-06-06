@@ -1,13 +1,13 @@
 {
   "name": "@crensoft/mui-marketing",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "Marketing components",
   "main": "./lib/index.js",
   "repository": "https://github.com/crensoft/mui",
   "author": "Terence Crenshaw",
   "license": "MIT",
   "peerDependencies": {
-    "@material-ui/core": "^4.0.0-beta.1",
+    "@material-ui/core": "^4.0.0-rc.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },

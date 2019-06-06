@@ -9,5 +9,5 @@ test('should render', () => {
   const { getByText } = render(<div>{renderText({ variant: 'body1' }, myText)}</div>);
 
   const ele = getByText(myText);
-  expect(ele.nodeName).toEqual('P');
+  expect(ele.nodeName).toEqual('SPAN');
 });
