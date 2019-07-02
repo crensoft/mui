@@ -1,6 +1,6 @@
 {
   "name": "@crensoft/mui-core",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Material UI stuff",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
