@@ -1,6 +1,6 @@
 {
   "name": "@crensoft/test-utils",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "React testing utils",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
