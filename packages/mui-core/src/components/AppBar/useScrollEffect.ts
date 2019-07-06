@@ -7,6 +7,9 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
  * @param param0
  */
 export default function useScrollEffect({ scrollTarget }: { scrollTarget: any }) {
+  if (typeof window === 'undefined') {
+    return false;
+  }
   const [scrollElement, setScrollTarget] = useState<any>(window);
   const trigger = useScrollTrigger({
     disableHysteresis: true,

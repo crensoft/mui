@@ -21,7 +21,7 @@ export type LinkProps = {
   guide?: boolean;
   children?: React.ReactNode;
   content?: React.ReactNode;
-  component?: React.ReactElement;
+  component?: React.ReactNode;
   title?: string;
   style?: React.CSSProperties;
 };
@@ -29,7 +29,7 @@ export type LinkProps = {
 export default function Link({ component, children, content, to, guide, ...other }: LinkProps) {
   const classes = useStyles();
   const renderIcon = () => {
-    if (!guide) return null;
+    if (!guide) return;
     // xxx: can also use ">" as arrow
     return <FontAwesomeIcon className={classes.LinkGuide} icon="long-arrow-alt-right" />;
   };
@@ -37,8 +37,7 @@ export default function Link({ component, children, content, to, guide, ...other
   const Component: any = component || BaseLink;
   return (
     <Component {...other} href={to} title={content as string}>
-      {content}
-      {children}
+      {children || content}
       {renderIcon()}
     </Component>
   );

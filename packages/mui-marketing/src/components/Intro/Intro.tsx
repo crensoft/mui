@@ -98,7 +98,12 @@ export default function Intro({
     default:
       calcDividerColor = dividerColor;
   }
-  const classes = useStyles({ align, center, inline, dividerColor: calcDividerColor });
+  const classes = useStyles({
+    align,
+    center: center,
+    inline,
+    dividerColor: calcDividerColor,
+  });
 
   if (!title && !body) {
     throw new Error('Intro title and body cannot both be empty');

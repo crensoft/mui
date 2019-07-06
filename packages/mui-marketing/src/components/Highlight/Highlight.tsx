@@ -29,6 +29,8 @@ const useStyles = createStyles(
 export type HighlightProps = {
   children?: ReactNode;
   illustration?: any;
+  img?: string | { src: string; srcset?: string };
+  picture?: string | { src?: string; srcset?: string };
   centerItems?: boolean;
   flip?: boolean;
   custom?: any;
@@ -42,6 +44,8 @@ export default function Highlight({
   custom = {},
   illustration,
   graphicBottom,
+  img,
+  picture,
   className,
   ...props
 }: HighlightProps) {
@@ -54,9 +58,18 @@ export default function Highlight({
     </Col>,
   ];
 
+  const src = typeof img === 'object' ? img.src : img;
+  const srcset = typeof img === 'object' ? img.srcset : '';
   contentItems.push(
     <Col key="visual" xs={12} sm={6}>
-      <Img responsive alt="visuals" svg={illustration} />
+      <Img
+        responsive
+        alt="visuals"
+        picture={picture}
+        src={src}
+        srcset={srcset}
+        svg={illustration}
+      />
     </Col>,
   );
 

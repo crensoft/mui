@@ -1,7 +1,8 @@
 import React from 'react';
+import { createStyles } from '@crensoft/mui-core';
+import { useMobile } from '@crensoft/mui-core/lib/hooks';
 import Highlight, { HighlightProps } from '../Highlight/Highlight';
 import PainPoint, { PainPointProps } from '../PainPoint/PainPoint';
-import { createStyles } from '@crensoft/mui-core';
 
 const useStyles = createStyles(theme => ({
   HighlightContent: {
@@ -19,18 +20,25 @@ export default function Hero({
   centerItems,
   center,
   illustration,
+  img,
+  picture,
+  id,
   ...props
 }: HeroProps) {
+  const isMobile = useMobile();
   const classes = useStyles();
   return (
     <Highlight
       custom={classes}
       whitespace={whitespace}
       illustration={illustration}
+      img={img}
+      picture={picture}
+      id={id}
       centerItems={centerItems}
       graphicBottom
     >
-      <PainPoint h1 center={center} {...props} />
+      <PainPoint h1 center={isMobile || center} {...props} />
     </Highlight>
   );
 }

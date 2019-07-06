@@ -38,6 +38,8 @@ export interface ActionLinkProps extends LinkProps {
   error?: boolean;
   cta?: boolean;
   className?: string;
+  component?: React.ReactNode;
+  Wrapper?: React.FunctionComponent<{ href?: string }>;
 }
 
 // todo: add validateProps
@@ -49,6 +51,7 @@ export default function ActionLink({
   large,
   cta,
   className,
+  Wrapper,
   ...props
 }: ActionLinkProps) {
   const classes = useStyles();
@@ -57,6 +60,7 @@ export default function ActionLink({
   if (prominent) {
     opts.variant = 'contained';
   } else {
+    // @ts-ignore
     Component = BaseLink;
   }
   if (primary) {
@@ -68,5 +72,11 @@ export default function ActionLink({
     opts.size = 'large';
   }
   opts.className = clsx(classes.root, cta && classes.cta, className);
-  return <Link to={to} component={Component} {...opts} {...props} />;
+  return Wrapper ? (
+    <Wrapper href={to}>
+      <Link to={to} component={Component} {...opts} {...props} />
+    </Wrapper>
+  ) : (
+    <Link to={to} component={Component} {...opts} {...props} />
+  );
 }

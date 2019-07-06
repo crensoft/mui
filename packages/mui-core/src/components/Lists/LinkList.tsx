@@ -21,14 +21,21 @@ const useStyles = createStyles(
 type LinkListItem = { to: string; content: ReactNode };
 type LinkListProps = {
   links: LinkListItem[];
+  Wrapper?: React.FunctionComponent<{ href?: string }>;
 };
 
-export default function LinkList({ links }: LinkListProps) {
+export default function LinkList({ links, Wrapper }: LinkListProps) {
   const classes = useStyles();
 
   const renderLinks = renderMap<LinkListItem>(({ to, content }) => (
     <Col key={to}>
-      <Link to={to}>{content}</Link>
+      {Wrapper ? (
+        <Wrapper href={to}>
+          <Link to={to}>{content}</Link>
+        </Wrapper>
+      ) : (
+        <Link to={to}>{content}</Link>
+      )}
     </Col>
   ));
   return (

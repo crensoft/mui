@@ -34,13 +34,15 @@ const useStyles = createStyles(
 
 export interface ImageProps {
   src?: string;
+  srcset?: string;
   alt?: string;
   svg?: React.ReactNode;
   responsive?: boolean;
   height?: any;
+  picture?: any;
 }
 
-export default function Image({ src, svg, alt, height, responsive }: ImageProps) {
+export default function Image({ src, srcset, svg, alt, height, responsive, picture }: ImageProps) {
   if (!alt) {
     throw new Error('Alt text required');
   }
@@ -55,8 +57,15 @@ export default function Image({ src, svg, alt, height, responsive }: ImageProps)
         {svg}
       </div>
     );
+  } else if (picture) {
+    html = (
+      <picture>
+        <source srcSet={picture.src} type={`image/${picture.type}`} />
+        <img className={classes.image} src={src} srcSet={srcset} alt={alt} />
+      </picture>
+    );
   } else {
-    html = <img className={classes.image} src={src} alt={alt} />;
+    html = <img className={classes.image} src={src} srcSet={srcset} alt={alt} />;
   }
   return html;
 }

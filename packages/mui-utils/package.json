@@ -2,6 +2,7 @@
   "name": "@crensoft/mui-utils",
   "version": "0.1.4",
   "description": "Material UI utils",
+  "main": "./lib/index.js",
   "module": "./lib/index.js",
   "repository": "https://github.com/crensoft/mui",
   "author": "Terence Crenshaw",

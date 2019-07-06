@@ -65,6 +65,8 @@ export interface MarketSectionProps extends ContainerProps {
   bgFixed?: boolean;
   overlay?: any;
   mobileCollapse?: boolean;
+  maxWidth?: any;
+  id?: string;
 }
 
 export default function MarketSection({
@@ -79,6 +81,7 @@ export default function MarketSection({
   bgFixed,
   overlay,
   className,
+  id,
   mobileCollapse,
 }: MarketSectionProps) {
   let content = children;
@@ -142,7 +145,7 @@ export default function MarketSection({
   );
   const showOverlay = overlay && !isCollapsed;
   return (
-    <section style={style} className={cl}>
+    <section id={id} style={style} className={cl}>
       {showOverlay && <Overlay className={classes.overlay} />}
       {preContent}
       <Container className={classes.container} maxWidth={maxWidth} center>
