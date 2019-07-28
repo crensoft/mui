@@ -1,5 +1,6 @@
 import React, { ReactNode, CSSProperties, useState } from 'react';
 import { makeStyles } from '@material-ui/core';
+import Theme from '../Theme/Theme';
 
 const useStyles = makeStyles({
   ['frame-wrapper']: {
@@ -25,7 +26,7 @@ export default function FrameWrapper({
   };
   return (
     <div style={style} className={enableFullscreen ? '' : classes['frame-wrapper']}>
-      {children}
+      <Theme>{children}</Theme>
     </div>
   );
 }
